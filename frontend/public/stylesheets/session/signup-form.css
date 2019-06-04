@@ -1,0 +1,152 @@
+body {
+    background-color: #abdff1;
+}
+
+.signup-form-container{
+    height: 800px;
+    width: 80%;
+    display: flex;
+    flex-direction: column; 
+    /* justify-content: center;  */
+    margin: 0 auto; 
+    margin-top: 69px;
+    background: #abdff1; 
+}
+
+.signup-header{
+    margin: 0 auto; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black; 
+    /* font-weight: 100;  */
+}
+.signup-form{
+    margin: 0 auto;
+    margin-top: 80px;
+    background: #abdff1;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.session-form{
+    margin-top: 0; 
+    width: 100%; 
+}
+
+#username{
+    width: 100%; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 5px 0px;
+    border-radius: 3px; 
+    border: none;
+    height: 20px;
+    text-indent: 10px;
+}
+
+#age{
+    width: 100%; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 5px 0px;
+    border-radius: 3px;
+    border: none; 
+    height: 20px;
+    text-indent: 10px;
+}
+
+#gender{
+    width: 50%; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 5px 0px;
+    font-size: 14px;
+    background-color: white;
+    border: none;
+}
+
+#password{
+    width: 100%; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 5px 0px;
+    border-radius: 3px; 
+    border: none;
+    height: 20px;
+    text-indent: 10px;
+}
+
+#password-two{
+    width: 100%; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 5px 0px;
+    border-radius: 3px;
+    margin-bottom: 20px;   
+    border: none; 
+    height: 20px;
+    text-indent: 10px;
+}
+
+#signup-form select{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    margin: 3px 0px;
+}
+
+.signup-button{
+    margin-top: 20px; 
+    width: 40%;
+    padding: 6px 12px;
+    background-color: #ef6c33;
+    color: white; 
+    border-radius: 3px; 
+    border: none; 
+    margin: 0 auto; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.signup-button:hover {
+    background-color: #ff8533;
+}
+
+.signup-text{
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+}
+
+.signup-link{
+    text-decoration: underline;
+    color: white; 
+    font-size: 14px; 
+    
+}
+
+#login-username{
+    width: 100%; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 20px 0px 5px 0px;
+    border-radius: 3px; 
+    border: none;
+    height: 20px;
+    text-indent: 10px;
+}
+
+#login-password{
+    width: 100%; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 5px 0 15px 0px;
+    border-radius: 3px; 
+    border: none;
+    height: 20px;
+    text-indent: 10px;
+}
+
+.errors{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: red; 
+}

@@ -1,0 +1,179 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+    
+a:-webkit-any-link {
+    text-decoration: none;
+    color: none;
+}
+
+.showbackground {
+    display: flex;
+    justify-content: center;
+}
+.container-header-parent {
+    width: 100%;
+    font-size: 50px;
+}
+.question-container {
+    background-color: #ABDFF1;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 50%;
+    padding: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative; 
+    margin-top: 40px; 
+}
+
+.wyr-head {
+    color: #064A60;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2;
+}
+.upvoteDownvote {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.upvote-button {
+    font-size: 30px;
+    padding: 10px;
+    color: #064A60;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.upvote-button:hover {
+    color: rgba(255, 0, 0, 0.657);
+}
+.likeEmote {
+    font-size: 40px;
+}
+
+.downvote-button {
+    font-size: 30px;
+    padding: 10px;
+    color: #064A60;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.downvote-button:hover {
+    color: rgb(95, 95, 95);
+}
+.dislikeEmote {
+    font-size: 40px;
+}
+
+.answers {
+    justify-content: center;
+    padding: 50px;
+}
+
+.answer-button {
+    padding: 30px;
+    margin: 20px;
+    font-size: 20px;
+    border: 4px solid white;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #EF6C33;
+    color: #064A60  ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.answer-button:hover {
+    background-color: pink;
+    color: #EF6C33;
+}
+
+.allQuestions {
+    display: flex;
+    margin: 40px 0px 0px;
+    justify-content: center;
+    align-self: center;
+    font-size: 50px;
+    background: #064A60;
+    color: white;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.questionLink {
+      width: 100%;
+    object-fit: fill;
+    align-self: center;
+}
+.questionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.question-container-index {
+    padding: 20px;
+    background-color: #EF6C33;
+    margin: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.question-index {
+    align-self: center;
+    display: flex;
+    font-size: 20px;
+}
+
+.upvoteDownvoteOnIndex {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.upvoteIndex {
+    font-size: 30px;
+    padding: 10px;
+    color: #064A60;
+    font-weight: bold;
+    display: flex;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.likeEmoteIndex {
+    font-size: 40px;
+    padding: 0px 10px;
+}
+
+.downvoteIndex {
+    font-size: 30px;
+    padding: 10px;
+    color: #064A60;
+    font-weight: bold;
+    display: flex;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.dislikeEmoteIndex {
+    font-size: 40px;
+    padding: 0px 10px;
+}
+
+.questionComponent {
+    padding: 5px;
+    font-size: 25px;
+}
