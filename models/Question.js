@@ -6,14 +6,14 @@ const QuestionSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'users'
   },
-  option1: {
-    type: String,
-    required: true
-  },
-  option2: {
-    type: String,
-    required: true
-  },
+  option1: [{
+    type: Schema.Types.ObjectId,
+    ref: 'answer'
+  }],
+  option2: [{
+    type: Schema.Types.ObjectId,
+    ref: 'answer'
+  }],
   questionType: {
     type: String,
     required: true
@@ -23,14 +23,6 @@ const QuestionSchema = new Schema({
     default: 0
   },
   downvote: {
-    type: Number,
-    default: 0
-  },
-  answer_a: {
-    type: Number,
-    default: 0
-  },
-  answer_b: {
     type: Number,
     default: 0
   },
