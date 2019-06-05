@@ -10,7 +10,7 @@ const AnswerSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'question'
     }, 
-    body: {
+    answer: {
         type: String, 
         required: true 
     }

@@ -6,14 +6,14 @@ const QuestionSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'users'
   },
-  option1: [{
-    type: Schema.Types.ObjectId,
-    ref: 'answer'
-  }],
-  option2: [{
-    type: Schema.Types.ObjectId,
-    ref: 'answer'
-  }],
+  option1: {
+    type: String,
+    required: true
+  },
+  option2: {
+    type: String,
+    required: true
+  },
   questionType: {
     type: String,
     required: true
