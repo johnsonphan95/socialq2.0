@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import Splash from './splash';
+import QuestionBoxes from './question_boxes';
 
 class NavBar extends React.Component {
 
@@ -45,7 +45,7 @@ class NavBar extends React.Component {
             <div className="app-name">Social Q's</div>
             {this.getLinks()}
         </div> 
-            <Splash />
+            <QuestionBoxes />
       </>
     )
   }
