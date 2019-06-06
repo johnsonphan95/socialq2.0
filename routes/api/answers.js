@@ -47,7 +47,13 @@ router.post('/',
         }
 
         const newAnswer = new Answer({
-            user: req.user.id, 
+            user: {
+                _id: req.user.id, 
+                age: req.user.age, 
+                gender: req.user.gender
+            }, 
+            // userAge: req.user.age, 
+            // userGender: req.user.gender,
             answer: req.body.answer, 
             question: req.body.question
         });

@@ -2,9 +2,23 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const AnswerSchema = new Schema({
+    // user: {
+    //     type: Schema.Types.Object, 
+    //     ref: 'users'
+    // },
     user: {
-        type: Schema.Types.ObjectId, 
-        ref: 'users'
+        _id: {
+            type: Schema.Types.ObjectId, 
+            ref: 'users'
+        },
+        age: {
+            type: Number, 
+            default: 0
+        }, 
+        gender: {
+            type: String, 
+            required: true
+        }
     },
     question: {
         type: Schema.Types.ObjectId,

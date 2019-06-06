@@ -9,6 +9,7 @@ class QuestionAnswer extends React.Component {
       users: [], 
       answers: []
     }
+    this.filterAnswers = this.filterAnswers.bind(this);
   }
 
   componentDidMount() {
@@ -23,7 +24,6 @@ class QuestionAnswer extends React.Component {
         users: users.data
       })
     });
-    // debugger
     this.props.fetchQuestionAnswers(this.props.qId).then(({answers}) => {
       this.setState({
         answers: answers.data
@@ -43,28 +43,27 @@ class QuestionAnswer extends React.Component {
     }
   }
 
-  filterData(){
-    let answer1 = []; 
-    let answer2 = []; 
-    let results = {};
-
-    answer1 = this.state.answers.filter(answer => answer.answer === "a");
-    answer2 = this.state.answers.filter(answer => answer.answer === "b");
-
-    
+  filterAnswers(){
+    let answers = {};
+    answers["a"] = this.state.answers.filter((answer) => answer.answer === 'a');
+    answers["b"] = this.state.answers.filter((answer) => answer.answer === 'b');
+    return answers;
   }
 
   render() {
     if (this.state.question === undefined ) return null;
+    if (this.state.answers.length === 0) return null; 
+    if (this.state.users.length === 0) return null;
 
-
+    let answers = this.filterAnswers();
+    console.log(answers);
     const data = {
       labels: [
         `${this.props.question.option1}`,
         `${this.props.question.option2}`
       ],
       datasets: [{
-        data: [`24`, `33`],
+        data: [answers["a"].length, answers["b"].length],
         backgroundColor: [
           '#EF6C33',
           '#AAAAAA'
