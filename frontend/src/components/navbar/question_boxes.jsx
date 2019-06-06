@@ -1,7 +1,7 @@
 import React from 'react';
 import {withRouter, Link} from 'react-router-dom'
 
-class Splash extends React.Component {
+class QuestionBoxes extends React.Component {
   requestQ(type) {
     // this.props.history.push(`/questions/type/${type}`)
   }
@@ -16,20 +16,20 @@ class Splash extends React.Component {
     return (
       <>
       <div className="question-button-background">
-          <div className={(this.props.location.pathname === "/") ? "question-button-container-two" : "question-button-container"}>
-            <div className={(this.props.location.pathname === "/") ? "button-container-two" : "button-container"}>
-              <div className={(this.props.location.pathname === "/") ? "left-button-two" : "left-button"}> 
+          <div className={(this.props.location.pathname === "/play") ? "question-button-container-two" : "question-button-container"}>
+            <div className={(this.props.location.pathname === "/play") ? "button-container-two" : "button-container"}>
+              <div className={(this.props.location.pathname === "/play") ? "left-button-two" : "left-button"}> 
               <Link to="/questions/type/wyr">
-                <div className={(this.props.location.pathname === "/") ? "wyr-button-two" : "wyr-button"}>
+                <div className={(this.props.location.pathname === "/play") ? "wyr-button-two" : "wyr-button"}>
                   Would You <br/> Rather?
                 </div>
               </Link>
             </div>
               
-              <div className={(this.props.location.pathname === "/") ? "right-button-two" : "right-button"}>
+              <div className={(this.props.location.pathname === "/play") ? "right-button-two" : "right-button"}>
 
                 <Link to="/questions/type/rfdb">
-                  <div className={(this.props.location.pathname === "/") ? "rfdb-button-two" : "rfdb-button"}>
+                  <div className={(this.props.location.pathname === "/play") ? "rfdb-button-two" : "rfdb-button"}>
                     Red Flag or <br/> Dealbreaker?
                   </div>
                 </Link>
@@ -49,4 +49,4 @@ class Splash extends React.Component {
   }
 };
 
-export default withRouter(Splash);
+export default withRouter(QuestionBoxes);
