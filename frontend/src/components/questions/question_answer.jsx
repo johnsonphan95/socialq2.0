@@ -1,10 +1,14 @@
 import React from 'react';
-import {Doughnut} from 'react-chartjs-2';
+import {Pie} from 'react-chartjs-2';
 
 class QuestionAnswer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.question;
+    this.state = {
+      question: this.props.question, 
+      users: [], 
+      answers: []
+    }
   }
 
   componentDidMount() {
@@ -14,6 +18,17 @@ class QuestionAnswer extends React.Component {
           question: question.data
         })
       })
+    this.props.fetchUsers().then(({users}) => {
+      this.setState({ 
+        users: users.data
+      })
+    });
+    // debugger
+    this.props.fetchQuestionAnswers(this.props.qId).then(({answers}) => {
+      this.setState({
+        answers: answers.data
+      })
+    });
   }
 
   componentDidUpdate() {
@@ -28,29 +43,42 @@ class QuestionAnswer extends React.Component {
     }
   }
 
+  filterData(){
+    let answer1 = []; 
+    let answer2 = []; 
+    let results = {};
+
+    answer1 = this.state.answers.filter(answer => answer.answer === "a");
+    answer2 = this.state.answers.filter(answer => answer.answer === "b");
+
+    
+  }
+
   render() {
+    if (this.state.question === undefined ) return null;
+
+
     const data = {
       labels: [
         `${this.props.question.option1}`,
         `${this.props.question.option2}`
       ],
       datasets: [{
-        data: [`${this.props.question.answer_a}`, `${this.props.question.answer_b}`],
+        data: [`24`, `33`],
         backgroundColor: [
           '#EF6C33',
-          '#ABDFF1'
+          '#AAAAAA'
         ],
         hoverBackgroundColor: [
           '#EF6C33',
-          '#ABDFF1'
+          '#AAAAAA'
         ]
       }]
     };
 
-    if (this.state.question === undefined ) return null;
     return (
     <> 
-      <Doughnut data={data}
+      <Pie data={data}
         width={100}
         height={100}
         legend = {{display: true, labels: {fontSize: 18}}}

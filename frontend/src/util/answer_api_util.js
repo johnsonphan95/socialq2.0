@@ -8,10 +8,10 @@ export const getAnswers = () => {
     return axios.get('/api/answers')
 }
 
-export const getSpecificAnswers = (data) => {
-    return axios.get(`/api/answers/questions/${data.questionId}/${data.answer}`)
-}
+// export const getSpecificAnswers = (data) => {
+//     return axios.get(`/api/answers/questions/${data.questionId}/${data.answer}`)
+// }
 
-export const getQuestionAnswers = (data) => {
-    return axios.get(`api/answers/questions/${data.questionId}`)
+export const getQuestionAnswers = (id) => {
+    return axios.get(`api/answers/questions/${id}`)
 }

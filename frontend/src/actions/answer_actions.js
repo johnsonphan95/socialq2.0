@@ -1,6 +1,6 @@
 import {
     writeAnswer, 
-    getSpecificAnswers, 
+    // getSpecificAnswers, 
     getQuestionAnswers
 } from '../util/answer_api_util';
 
@@ -29,11 +29,11 @@ export const createAnswer = data => dispatch => (
         .catch(err => console.log(err))
 );
 
-export const fetchSpecificAnswers = (data) => dispatch => (
-    getSpecificAnswers(data)
-        .then(answers => dispatch(receiveAnswers(answers)))
-        .catch(err => console.log(err))
-)
+// export const fetchSpecificAnswers = (data) => dispatch => (
+//     getSpecificAnswers(data)
+//         .then(answers => dispatch(receiveAnswers(answers)))
+//         .catch(err => console.log(err))
+// )
 
 export const fetchQuestionAnswers = (data) => dispatch => (
     getQuestionAnswers(data)

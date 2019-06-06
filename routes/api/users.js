@@ -18,7 +18,7 @@ router.get('/current', passport.authenticate('jwt',{session: false}), (req,res) 
 
 router.get('/', (req, res) => {
   User
-    .find()
+    .find({}, {password: 0})
     .then(users => res.json(users))
     .catch(err => res.status(404).json({ noanswersfound: "No users found" }))
 });
