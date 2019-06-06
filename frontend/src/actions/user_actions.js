@@ -10,11 +10,11 @@ export const receiveAnswers = users => ({
     users
 })
 
-export const fetchAnswerUsers = (data) = dispatch (
-    getAnswerUsers(data)
-        .then(users => dispatch(receiveAnswers(users)))
-        .catch(err => console.log(err))
-)
+// export const fetchAnswerUsers = data = dispatch => (
+//     getAnswerUsers(data)
+//         .then(users => dispatch(receiveAnswers(users)))
+//         .catch(err => console.log(err))
+// )
 
 
 

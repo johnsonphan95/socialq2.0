@@ -29,13 +29,13 @@ export const createAnswer = data => dispatch => (
         .catch(err => console.log(err))
 );
 
-export const fetchSpecificAnswers = (data) => dispatch (
+export const fetchSpecificAnswers = (data) => dispatch => (
     getSpecificAnswers(data)
         .then(answers => dispatch(receiveAnswers(answers)))
         .catch(err => console.log(err))
 )
 
-export const fetchQuestionAnswers = (data) => dispatch (
+export const fetchQuestionAnswers = (data) => dispatch => (
     getQuestionAnswers(data)
         .then(answers => dispatch(receiveAnswers(answers)))
         .catch(err => console.log(err))

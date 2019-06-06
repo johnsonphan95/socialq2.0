@@ -71,7 +71,7 @@ class QuestionTypes extends React.Component {
     
     e.preventDefault();
     let answer = {
-      answer: "c",
+      answer: "b",
       question: this.state.question._id
     };
     

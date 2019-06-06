@@ -57,7 +57,7 @@ class QuestionAnswer extends React.Component {
         options={{ maintainAspectRatio: false }}
       />
       <div>
-        <p>{this.}</p>
+
       </div>
     </>
   )
