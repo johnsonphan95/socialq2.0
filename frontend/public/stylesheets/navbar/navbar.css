@@ -16,14 +16,14 @@ body {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: #abdff1
+    background: white
 }
 #root {
     width: 100%;
 }
 .navbar-container{
     position: fixed;
-    background-color: white; 
+    background-color: black; 
     height: 80px;
     width: 100%;
     z-index: 30;
@@ -60,7 +60,7 @@ body {
 }
 
 .app-name{
-    color: black; 
+    color: white; 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 40px;
     font-weight: bold;
@@ -89,17 +89,19 @@ body {
     height: 30px;
     line-height: 30px;
     text-align: left;
-    font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif; 
-    background-color: #EF6C33; 
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;; 
+    font-weight: bold; 
+    background-color: white; 
     border-radius: 5px;
-    color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
     padding: 10px 18px;
     margin-right: 10px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sign-up:hover {
-    background-color: #ff8533;
+    background-color: 	#f2c40f;
 }
 
 .log-in{
@@ -107,18 +109,19 @@ body {
     width: 140px;
     height: 30px;
     line-height: 30px;
-    font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold; 
     align-self: left; 
-    background-color: #EF6C33;
-    border: none;
+    background-color: white;
     border-radius: 5px;
-    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
     padding: 10px 16px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
 .log-in:hover {
-    background-color: #ff8533;
+    background-color: 	#f2c40f;
 }
 
 
@@ -126,30 +129,31 @@ body {
      text-decoration: none; 
     width: 140px;
     line-height: 30px;
-    font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-    align-self: left; 
-    background-color: #EF6C33;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold; 
+    align-self: left;  
+    background-color: white;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: black;
     padding: 10px 16px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
 
 .log-out:hover {
-     background-color: #ff8533;
+     background-color: #f2c40f;
 }
 .question-button-background{
     width: 80%;  
     max-width: 1280px;
     margin: 0 auto;
-    background: #E1DDDB; 
+    background: white; 
 }
 
 .question-button-container{
     margin-top: 69px;
     height: 120px;
-    background: #abdff1;
+    background: white;
     position: relative; 
     border-top: none; 
 }
@@ -157,7 +161,7 @@ body {
 .question-button-container-two{
     margin-top: 69px;
     height: 600px;
-    background: #abdff1;
+    background: white;
     position: relative; 
     border-top: none; 
 }
@@ -190,6 +194,7 @@ body {
 }
 
 .left-button-two{
+    height: 50%;
     display: flex;
     width: 50%; 
     justify-content: center; 
@@ -202,6 +207,7 @@ body {
 }
 
 .right-button-two{
+    height: 50%;
     display: flex;
     width: 50%;
     justify-content: center; 
@@ -211,11 +217,11 @@ body {
     width: max-content;
     padding: 20px;
     margin: 10px;
-    background: #3bb4c1;
-    border: 1px solid #048998; 
+    background: #80d4f5;
+    border: 1px solid #80d4f5; 
     border-radius: 5px;
     color: white;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center; 
     transition: .3s;
@@ -227,14 +233,15 @@ body {
 
 .wyr-button-two{
     width: max-content;
+    height: 50%;
     padding: 80px 47px;
-    background: #3bb4c1;
-    border: 1px solid #048998; 
+    background: #80d4f5;
+    border: 1px solid #80d4f5; 
     border-radius: 5px;
-    color: white;
+    color: black;
     font-weight: bold;
     /* font-family: times;  */
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 55px; 
     /* "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif; */
     text-align: center; 
@@ -245,22 +252,24 @@ body {
 }
 
 .wyr-button:hover{
-    background: #048998;
+    background: black;
+    color: white;
 }
 
 .wyr-button-two:hover{
-    background: #048998;
+    background: black;
+    color: white;
 }
 
 .rfdb-button{
     width: max-content;
     padding: 5px 13px;
     margin: 10px;
-    background: #3bb4c1;
-    border: 1px solid #048998;
+    background: #80d4f5;
+    border: 1px solid #80d4f5; 
     border-radius: 5px;
     color: white;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center; 
     transition: .3s;
@@ -270,13 +279,14 @@ body {
 
 .rfdb-button-two{
     width: max-content;
-    padding: 25px 22px;
-    background: #3bb4c1;
-    border: 1px solid #048998;
+    height: 50%;
+    padding: 80px 47px;
+    background: #80d4f5;
+    border: 1px solid #80d4f5; 
     border-radius: 5px;
-    color: white;
+    color: black;
     font-size: 55px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center; 
     transition: .3s;
@@ -285,11 +295,13 @@ body {
 }
 
 .rfdb-button:hover{
-    background: #048998;
+    background: black;
+    color: white;
 }
 
 .rfdb-button-two:hover{
-    background: #048998;
+    background: black;
+    color: white;
 }
 
 .greeting-logged-in{

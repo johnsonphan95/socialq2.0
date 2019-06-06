@@ -43,7 +43,7 @@ class QuestionBoxes extends React.Component {
     };
 
     return(
-      (this.props.location.pathname === "/login" || this.props.location.pathname === "/signup") ?
+      (this.props.location.pathname === "/login" || this.props.location.pathname === "/signup") || (this.props.location.pathname === "/") ?
       sessionPage() : notSessionPage()
     )
   }

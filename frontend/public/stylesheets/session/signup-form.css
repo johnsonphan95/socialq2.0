@@ -1,5 +1,5 @@
 body {
-    background-color: #abdff1;
+    background-color: white;
 }
 
 .signup-form-container{
@@ -10,7 +10,7 @@ body {
     /* justify-content: center;  */
     margin: 0 auto; 
     margin-top: 69px;
-    background: #abdff1; 
+    background: white; 
 }
 
 .signup-header{
@@ -22,7 +22,7 @@ body {
 .signup-form{
     margin: 0 auto;
     margin-top: 80px;
-    background: #abdff1;
+    background: #80d4f5;
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -96,18 +96,18 @@ body {
     margin-top: 20px; 
     width: 40%;
     padding: 6px 12px;
-    background-color: #ef6c33;
-    color: white; 
+    background-color: #f5d03d;
+    color: black; 
     border-radius: 3px; 
     border: none; 
-    margin: 0 auto; 
+    margin: 5px 0px 0px 0px; 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .signup-button:hover {
-    background-color: #ff8533;
+    background-color: #f2c40f;
 }
 
 .signup-text{

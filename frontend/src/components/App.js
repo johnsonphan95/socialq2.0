@@ -11,9 +11,10 @@ import QuestionsContainer from './questions/questions_container';
 import QuestionAnswerContainer from './questions/question_answers_container';
 import QuestionShowContainer from './questions/question_show_container';
 import QuestionTypesContainer from './questions/question_types_container';
+import Play from './home/play'; 
 
 import { Route } from 'react-router';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div className="app-page">
@@ -21,6 +22,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path = "/signup" component = {SignUpFormContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <ProtectedRoute exact path = "/play" component={Play} />
       <Route exact path = "/questions" component={QuestionsContainer} />
       <Route exact path = "/new_question" component={QuestionCreateContainer} />
       <Route exact path = "/questions/:qid" component={QuestionShowContainer} />
