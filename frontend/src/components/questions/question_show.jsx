@@ -6,9 +6,8 @@ class QuestionShow extends React.Component {
         this.state = {
             upvote: this.props.question.upvote,
             downvote: this.props.question.downvote, 
-            answer_a: this.props.question.answer_a,
-            answer_b: this.props.question.answer_b,
-            id: this.props.match.params.qid
+            id: this.props.match.params.qid, 
+            questionId: this.props.question.id
         };
         this.handleDownvote = this.handleDownvote.bind(this);
         this.handleUpvote = this.handleUpvote.bind(this);
@@ -22,15 +21,11 @@ class QuestionShow extends React.Component {
               this.setState({
               upvote: question.data.upvote,
               downvote: question.data.downvote, 
-              answer_a: question.data.answer_a, 
-              answer_b: question.data.answer_b
           })})
     }
 
     componentDidUpdate() {
       if (
-          this.props.question.answer_a !== this.state.answer_a ||
-          this.props.question.answer_b !== this.state.answer_b ||
           this.props.question.upvote !== this.state.upvote ||
           this.props.question.downvote !== this.state.downvote 
         ) {
@@ -39,8 +34,6 @@ class QuestionShow extends React.Component {
                 this.setState({
                     upvote: question.data.upvote,
                     downvote: question.data.downvote,
-                    answer_a: question.data.answer_a,
-                    answer_b: question.data.answer_b
                 })
             })
           }
@@ -63,18 +56,16 @@ class QuestionShow extends React.Component {
 
     handleOption1(e){
         e.preventDefault();
-        let new_question = Object.assign({}, this.state)
-        new_question.answer_a += 1
-        this.props.updateQuestion(new_question)
-            .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
+        // this.props.updateQuestion(new_question)
+            // .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
     }
 
     handleOption2(e){
         e.preventDefault();
-        let new_question = Object.assign({}, this.state)
-        new_question.answer_b += 1
-        this.props.updateQuestion(new_question)
-            .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
+        // this.props.createAnswer()
+        //     .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
+        // this.props.updateQuestion(new_question)
+        //     .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
     }
 
 

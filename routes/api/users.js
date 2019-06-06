@@ -16,6 +16,13 @@ router.get('/current', passport.authenticate('jwt',{session: false}), (req,res) 
   });
 })
 
+router.get('/', (req, res) => {
+  User
+    .find()
+    .then(users => res.json(users))
+    .catch(err => res.status(404).json({ noanswersfound: "No users found" }))
+});
+
 // sign up route, saves user to mongoDB
 router.post('/register', (req,res) => {
   const { errors, isValid } = validateRegisterInput(req.body);

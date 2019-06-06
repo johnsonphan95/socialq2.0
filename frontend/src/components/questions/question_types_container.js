@@ -3,6 +3,7 @@ import {
   fetchQuestions,
   updateQuestionField
 } from "../../actions/question_actions";
+import {createAnswer} from '../../actions/answer_actions';
 import QuestionTypes from './question_type';
 
 const mapStateToProps = (state) => {
@@ -14,7 +15,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchQuestions: () => dispatch(fetchQuestions()),
-    updateQuestion: data => dispatch(updateQuestionField(data))
+    updateQuestion: data => dispatch(updateQuestionField(data)), 
+    createAnswer: data => dispatch(createAnswer(data))
   };
 };
 

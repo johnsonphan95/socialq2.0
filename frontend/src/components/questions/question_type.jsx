@@ -55,25 +55,28 @@ class QuestionTypes extends React.Component {
   // }
 
   handleOption1(e) {
-    debugger
     e.preventDefault();
-    let new_question = this.state.question;
-    new_question.answer_a += 1;
-    this.props
-      .updateQuestion(new_question)
-    this.props.history.push(`/questions/results/${new_question._id}`);
+    let answer = {
+      answer: "a", 
+      question: this.state.question._id
+    };
+    this.props.createAnswer(answer)
+      .then(() => this.props.history.push(`/questions/results/${this.state.question._id}`))
+    // this.props
+    //   .updateQuestion(new_question)
+    // this.props.history.push(`/questions/results/${new_question._id}`);
   }
 
   handleOption2(e) {
+    
     e.preventDefault();
-    let new_question = this.state.question;
-    new_question.answer_b += 1;
-    this.props
-      .updateQuestion(new_question)
-      // .then(() =>
-      //   this.props.history.push(`/questions/results/${new_question._id}`)
-      // );
-    this.props.history.push(`/questions/results/${new_question._id}`)
+    let answer = {
+      answer: "c",
+      question: this.state.question._id
+    };
+    
+    this.props.createAnswer(answer)
+      .then(() => this.props.history.push(`/questions/results/${this.state.question._id}`))
   }
 
   displayQuestion() {

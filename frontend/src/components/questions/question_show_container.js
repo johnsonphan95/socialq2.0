@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchQuestion, updateQuestionField } from '../../actions/question_actions';
+import { createAnswer } from '../../actions/answer_actions';
 import QuestionShow from './question_show';
 
 const mapStateToProps = (state, ownProps) => {
@@ -11,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchQuestion: (id) => dispatch(fetchQuestion(id)), 
-        updateQuestion: (data) => dispatch(updateQuestionField(data))
+        updateQuestion: (data) => dispatch(updateQuestionField(data)), 
+        createAnswer: (data) => dispatch(createAnswer(data))
     };
 };
 

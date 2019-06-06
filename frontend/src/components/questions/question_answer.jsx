@@ -56,6 +56,9 @@ class QuestionAnswer extends React.Component {
         legend = {{display: true, labels: {fontSize: 18}}}
         options={{ maintainAspectRatio: false }}
       />
+      <div>
+        <p>{this.}</p>
+      </div>
     </>
   )
 }
