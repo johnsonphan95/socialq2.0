@@ -7,7 +7,6 @@ class QuestionShow extends React.Component {
             upvote: this.props.question.upvote,
             downvote: this.props.question.downvote, 
             id: this.props.match.params.qid, 
-            questionId: this.props.question.id
         };
         this.handleDownvote = this.handleDownvote.bind(this);
         this.handleUpvote = this.handleUpvote.bind(this);
@@ -67,20 +66,20 @@ class QuestionShow extends React.Component {
         e.preventDefault();
         let answer = {
             answer: "a",
-            question: this.state.questionId
+            question: this.state.id
         };
         this.props.createAnswer(answer)
-            .then(() => this.props.history.push(`/questions/results/${this.state.questionId}`))
+            .then(() => this.props.history.push(`/questions/results/${this.state.id}`))
     }
 
     handleOption2(e){
         e.preventDefault();
         let answer = {
             answer: "b",
-            question: this.state.questionId
+            question: this.state.id
         };
         this.props.createAnswer(answer)
-            .then(() => this.props.history.push(`/questions/results/${this.state.questionId}`))
+            .then(() => this.props.history.push(`/questions/results/${this.state.id}`))
     }
 
 
