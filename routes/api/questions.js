@@ -71,12 +71,7 @@ router.patch('/:id', (req, res) => {
     // if (req.body.answer_b) {
     //   question.answer_b += Number.parseInt(req.body.answer_b);
     // }
-    if (req.body.answer_a) {
-      question.answer_a = req.body.answer_a 
-    }
-    if (req.body.answer_b) {
-      question.answer_b = req.body.answer_b
-    }
+    debugger
     if (req.body.upvote) {
       question.upvote = req.body.upvote 
     }

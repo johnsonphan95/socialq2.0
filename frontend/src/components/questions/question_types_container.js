@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchQuestions: () => dispatch(fetchQuestions()),
-    updateQuestion: data => dispatch(updateQuestionField(data)), 
+    updateQuestionField: data => dispatch(updateQuestionField(data)), 
     createAnswer: data => dispatch(createAnswer(data))
   };
 };
