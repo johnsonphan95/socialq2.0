@@ -8,7 +8,9 @@ body {
     top: 0;
     position: absolute; 
 }
-
+.vsc-initialized{
+    /* background: black;  */
+}
 .app-page{
     top: 0;
     left: 0;
@@ -16,11 +18,7 @@ body {
     bottom: 0;
     height: 100%;
     width: 100%;
-<<<<<<< HEAD
     background: white; 
-=======
-    /* background: #80d4f5; */
->>>>>>> ecd0332df963b5a05820f12a5633256e2491dabd
 }
 
 #root {
@@ -38,6 +36,7 @@ position: fixed;
     left: 0;
     border-bottom: 1px solid black;
     align-items: center; 
+    z-index: 30;
 }
 .navbar-container-2{
     margin: 0 auto; 
@@ -148,6 +147,7 @@ position: fixed;
     max-width: 1280px;
     margin: 0 auto;
     background: white; 
+    padding-bottom: 40px; 
 }
 
 .question-button-container{

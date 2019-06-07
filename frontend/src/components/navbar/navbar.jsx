@@ -14,7 +14,7 @@ class NavBar extends React.Component {
     e.preventDefault();
     this.props.logout();
      
-    this.props.history.replace('/login')
+    this.props.history.replace('/')
   }
 
   getLinks() {

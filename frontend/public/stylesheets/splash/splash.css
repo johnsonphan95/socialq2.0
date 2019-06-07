@@ -2,16 +2,53 @@
     display: flex;
     flex-direction: row; 
     margin: 0 auto; 
-    width: 80%;
+    width: 100%;
+    margin-top: 80px;
 }
 
 .splash-left{
-    height: 700px; 
+    height: 720px; 
     width: 50%;
-    background: #80d4f5; 
+    display: flex; 
+    overflow: hidden;
 }
 
 .splash-right{
     width: 50%;
     background: black; 
 }
+
+.splash-left img {
+    position: relative; 
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    /* animation-name: FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    animation-direction: alternate;  */
+}
+
+/* @keyframes FadeInOut {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.splash-img-1 {
+    animation-delay: 10s;
+}
+
+.splash-img-2 {
+    animation-delay: 6s;
+} */
+
