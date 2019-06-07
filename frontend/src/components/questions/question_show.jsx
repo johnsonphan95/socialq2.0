@@ -114,17 +114,17 @@ class QuestionShow extends React.Component {
                     </div>
                 </div>
             )
-        } else if (this.props.question.questionType === "RFDB") {
+        } else if (this.props.question.questionType === "rfdb") {
             return (
                 <div>
                     <div>
-                        <h2>{this.props.question.option1}</h2>
+                        <h2>{this.props.question.body}</h2>
                     </div>
                     <div>
-                        <h4 className="rfdb-button">Red Flag</h4>
+                        <h4 className="rfdb-button" onClick={this.handleOption1}>Red Flag</h4>
                     </div>
                     <div>
-                        <h4 className="rfdb-button">Deal Breaker</h4>
+                        <h4 className="rfdb-button" onClick={this.handleOption2}>Deal Breaker</h4>
                     </div>
                 </div>
             )

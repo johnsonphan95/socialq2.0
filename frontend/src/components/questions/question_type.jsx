@@ -143,17 +143,17 @@ class QuestionTypes extends React.Component {
           </div>
         </div>
       );
-    } else if (this.state.question.questionType === "RFDB") {
+    } else if (this.state.question.questionType === "rfdb") {
       return (
         <div>
           <div>
             <h2>{this.state.question.option1}</h2>
           </div>
           <div>
-            <h4 className="rfdb-button">Red Flag</h4>
+            <h4 className="rfdb-button" onClick={this.handleOption1}>Red Flag</h4>
           </div>
           <div>
-            <h4 className="rfdb-button">Deal Breaker</h4>
+            <h4 className="rfdb-button" onClick={this.handleOption2}>Deal Breaker</h4>
           </div>
         </div>
       );

@@ -18,6 +18,10 @@ const QuestionSchema = new Schema({
     type: String,
     required: true
   },
+  body: {
+    type: String,
+    default: "" 
+  },
   upvote: {
     type: Number,
     default: 0

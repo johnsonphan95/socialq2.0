@@ -6,6 +6,7 @@ class QuestionCreate extends React.Component {
     this.state = {
       option1: "",
       option2: "",
+      body: "",
       questionType: "wyr"
     }
 
@@ -17,8 +18,9 @@ class QuestionCreate extends React.Component {
     let question = {};
     if (this.state.questionType === "rfdb") {
       question = {
-        option1: this.state.option1,
-        option2: "na",
+        option1: "Red Flag",
+        option2: "Dealbreaker",
+        body: this.state.body,
         questionType: this.state.questionType
       }
     } else {
@@ -33,6 +35,7 @@ class QuestionCreate extends React.Component {
     this.setState({
       option1: "",
       option2: "",
+      body: "", 
       questionType: ""
     });
     this.props.history.push('/');
@@ -66,8 +69,8 @@ class QuestionCreate extends React.Component {
       return (
         <div className="question-create-field">
           <input className="question-create-form-input" type="textarea"
-            value={this.state.option1}
-            onChange={this.update("option1")}
+            value={this.state.body}
+            onChange={this.update("body")}
             placeholder="Question Prompt"
           />
           <br />
