@@ -7,8 +7,8 @@ class QuestionTypes extends React.Component {
     this.state = {
       questions: []
     };
-    // this.handleDownvote = this.handleDownvote.bind(this);
-    // this.handleUpvote = this.handleUpvote.bind(this);
+    this.handleDownvote = this.handleDownvote.bind(this);
+    this.handleUpvote = this.handleUpvote.bind(this);
     this.handleOption1 = this.handleOption1.bind(this);
     this.handleOption2 = this.handleOption2.bind(this);
   }
@@ -24,6 +24,7 @@ class QuestionTypes extends React.Component {
   }
 
   componentDidUpdate() {
+
     if (!this.state.question) {
       this.props.fetchQuestions();
       let qList;
@@ -33,6 +34,19 @@ class QuestionTypes extends React.Component {
       let randomQ = qList[Math.floor(Math.random() * qList.length)];
       this.setState({ question: randomQ });
     } 
+
+    // if (
+    //   this.props.question.upvote !== this.state.question.upvote ||
+    //   this.props.question.downvote !== this.state.question.downvote
+    // ) {
+    //   this.props.fetchQuestion(this.props.match.params.qid)
+    //     .then(({ question }) => {
+    //       this.setState({
+    //         upvote: question.data.upvote,
+    //         downvote: question.data.downvote,
+    //       })
+    //     })
+    // }
     
   }
 
@@ -40,19 +54,21 @@ class QuestionTypes extends React.Component {
     this.setState({ questions: newState.questions });
   }
 
-  // handleUpvote(e) {
-  //   e.preventDefault();
-  //   let new_question = this.state.question;
-  //   new_question.upvote += 1;
-  //   this.props.updateQuestion(new_question);
-  // }
+  handleUpvote(e) {
+    e.preventDefault();
+    let new_question = this.state.question;
+    new_question.upvote += 1;
+    this.props.updateQuestion(new_question);
+    this.forceUpdate();
+  }
 
-  // handleDownvote(e) {
-  //   e.preventDefault();
-  //   let new_question = this.state.question;
-  //   new_question.downvote += 1;
-  //   this.props.updateQuestion(new_question);
-  // }
+  handleDownvote(e) {
+    e.preventDefault();
+    let new_question = this.state.question;
+    new_question.downvote += 1;
+    this.props.updateQuestion(new_question);
+    this.forceUpdate();
+  }
 
   handleOption1(e) {
     e.preventDefault();
@@ -88,7 +104,7 @@ class QuestionTypes extends React.Component {
               <div className="container-header">
                 <div className="wyr-head">Would You Rather ? </div>
                 <div className="upvoteDownvote">
-                  {/* <div className="upvote-button" onClick={this.handleUpvote}>
+                  <div className="upvote-button" onClick={this.handleUpvote}>
                     <i className="likeEmote far fa-grin-hearts" />{" "}
                     {this.state.question.upvote} <br /> 
                   </div>
@@ -98,7 +114,7 @@ class QuestionTypes extends React.Component {
                   >
                     <i className="dislikeEmote far fa-flushed" />{" "}
                     {this.state.question.downvote}
-                  </div> */}
+                  </div>
                 </div>
               </div>
               <div>

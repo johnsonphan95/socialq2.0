@@ -16,7 +16,7 @@ body {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: white
+    /* background: #80d4f5; */
 }
 #root {
     width: 100%;
@@ -215,12 +215,12 @@ body {
 
 .wyr-button{
     width: max-content;
+    height: 50%; 
     padding: 20px;
     margin: 10px;
     background: #80d4f5;
-    border: 1px solid #80d4f5; 
     border-radius: 5px;
-    color: white;
+    color: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center; 
@@ -263,12 +263,12 @@ body {
 
 .rfdb-button{
     width: max-content;
-    padding: 5px 13px;
+    height: 50%; 
+    padding: 20px;
     margin: 10px;
-    background: #80d4f5;
-    border: 1px solid #80d4f5; 
+    background: #80d4f5; 
     border-radius: 5px;
-    color: white;
+    color: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center; 
