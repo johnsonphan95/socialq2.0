@@ -50,13 +50,19 @@ router.post('/register', (req,res) => {
             newUser.password = hash;
             newUser.save()
               .then(user => {
-                const payload = {id: user.id, username: user.username};
+                const payload = {
+                  id: user.id, username: user.username, age: user.age,
+                  gender: user.gender};
 
-                jwt.sign(payload, keys.secretOrKey, {expiresIn: 3600 }, (err,token) => {
-                  res.json({
-                    success: true,
-                    token: "Bearer " + token 
-                  });
+                jwt.sign(
+                  payload,
+                  keys.secretOrKey,
+                  { expiresIn: 21600 },
+                  (err, token) => {
+                    res.json({
+                      success: true,
+                      token: 'Bearer ' + token
+                    });
                 });
               })
               .catch(err => console.log(err));
@@ -96,7 +102,7 @@ router.post('/login', (req,res) => {
             jwt.sign(
               payload,
               keys.secretOrKey,
-              {expiresIn: 3600},
+              {expiresIn: 21600},
               (err, token) => {
                 res.json({
                   success: true,
