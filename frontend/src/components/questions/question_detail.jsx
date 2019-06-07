@@ -33,7 +33,7 @@ class QuestionDetail extends React.Component {
         <div className="question-container-index">
         <div className="question-index">
           <div className="questionComponent">
-              Red Flag? Deal Breaker? {this.props.question.option1}
+              {this.props.question.body} : Red Flag? Deal Breaker? 
           </div>
         </div>
           <div className="upvoteDownvoteOnIndex">
