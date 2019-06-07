@@ -5,7 +5,8 @@ class QuestionTypes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions: []
+      questions: [], 
+      
     };
     this.handleDownvote = this.handleDownvote.bind(this);
     this.handleUpvote = this.handleUpvote.bind(this);
@@ -55,19 +56,27 @@ class QuestionTypes extends React.Component {
   }
 
   handleUpvote(e) {
-    e.preventDefault();
-    let new_question = this.state.question;
-    new_question.upvote += 1;
-    this.props.updateQuestion(new_question);
-    this.forceUpdate();
+    e.preventDefault(); 
+    let new_data = {
+      id: this.state.question._id, 
+      upvote: this.state.question.upvote, 
+      downvote: this.state.question.downvote
+    }
+    
+    new_data.upvote += 1;
+    this.props.updateQuestionField(new_data);
   }
 
   handleDownvote(e) {
     e.preventDefault();
-    let new_question = this.state.question;
-    new_question.downvote += 1;
-    this.props.updateQuestion(new_question);
-    this.forceUpdate();
+    let new_data = {
+      id: this.state.question._id,
+      upvote: this.state.question.upvote,
+      downvote: this.state.question.downvote
+    }
+    new_data.downvote += 1;
+    this.props.updateQuestionField(new_data);
+
   }
 
   handleOption1(e) {
@@ -78,9 +87,7 @@ class QuestionTypes extends React.Component {
     };
     this.props.createAnswer(answer)
       .then(() => this.props.history.push(`/questions/results/${this.state.question._id}`))
-    // this.props
-    //   .updateQuestion(new_question)
-    // this.props.history.push(`/questions/results/${new_question._id}`);
+    
   }
 
   handleOption2(e) {

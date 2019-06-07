@@ -7,7 +7,6 @@ class QuestionShow extends React.Component {
             upvote: this.props.question.upvote,
             downvote: this.props.question.downvote, 
             id: this.props.match.params.qid, 
-            questionId: this.props.question.id
         };
         this.handleDownvote = this.handleDownvote.bind(this);
         this.handleUpvote = this.handleUpvote.bind(this);
@@ -42,30 +41,45 @@ class QuestionShow extends React.Component {
 
     handleUpvote(e){
         e.preventDefault();
-        let new_question = Object.assign({}, this.state)
-        new_question.upvote += 1
-        this.props.updateQuestion(new_question)
+        let new_data = {
+            id: this.state.id, 
+            upvote: this.state.upvote,
+            downvote: this.state.downvote
+        }
+        new_data.upvote += 1
+        this.props.updateQuestionField(new_data)
     }
 
     handleDownvote(e){
         e.preventDefault();
-        let new_question = Object.assign({}, this.state)
-        new_question.downvote += 1
-        this.props.updateQuestion(new_question)
+        
+        let new_data = {
+            id: this.state.id, 
+            upvote: this.state.upvote, 
+            downvote: this.state.downvote
+        }
+        new_data.downvote += 1
+        this.props.updateQuestionField(new_data)
     }
 
     handleOption1(e){
         e.preventDefault();
-        // this.props.updateQuestion(new_question)
-            // .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
+        let answer = {
+            answer: "a",
+            question: this.state.id
+        };
+        this.props.createAnswer(answer)
+            .then(() => this.props.history.push(`/questions/results/${this.state.id}`))
     }
 
     handleOption2(e){
         e.preventDefault();
-        // this.props.createAnswer()
-        //     .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
-        // this.props.updateQuestion(new_question)
-        //     .then(() => this.props.history.push(`/questions/results/${this.props.question._id}`))
+        let answer = {
+            answer: "b",
+            question: this.state.id
+        };
+        this.props.createAnswer(answer)
+            .then(() => this.props.history.push(`/questions/results/${this.state.id}`))
     }
 
 
