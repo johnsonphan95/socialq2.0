@@ -16,8 +16,9 @@ body {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: white
+    background: white; 
 }
+
 #root {
     width: 100%;
 }

@@ -42,7 +42,7 @@ class NavBar extends React.Component {
     return (
       <>
         <div className="navbar-container">
-            <div className="app-name">Social Q's</div>
+            <Link to={'/questions'} className="app-name">Social Q's</Link>
             {this.getLinks()}
         </div> 
             <QuestionBoxes />
