@@ -25,6 +25,7 @@ class QuestionTypes extends React.Component {
   }
 
   componentDidUpdate() {
+
     if (!this.state.question) {
       this.props.fetchQuestions();
       let qList;
@@ -34,6 +35,19 @@ class QuestionTypes extends React.Component {
       let randomQ = qList[Math.floor(Math.random() * qList.length)];
       this.setState({ question: randomQ });
     } 
+
+    // if (
+    //   this.props.question.upvote !== this.state.question.upvote ||
+    //   this.props.question.downvote !== this.state.question.downvote
+    // ) {
+    //   this.props.fetchQuestion(this.props.match.params.qid)
+    //     .then(({ question }) => {
+    //       this.setState({
+    //         upvote: question.data.upvote,
+    //         downvote: question.data.downvote,
+    //       })
+    //     })
+    // }
     
   }
 
@@ -62,6 +76,7 @@ class QuestionTypes extends React.Component {
     }
     new_data.downvote += 1;
     this.props.updateQuestionField(new_data);
+
   }
 
   handleOption1(e) {
