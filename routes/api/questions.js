@@ -8,7 +8,7 @@ const validateQuestionInput = require('../../validation/questions');
 // get all questions
 router.get('/', (req,res) => {
   Question.find()
-    .sort({date: -1})
+    .sort({upvote: -1})
     .then(questions => res.json(questions))
     .catch(err => res.status(404).json({noquestionsfound: 'No questions found'}));
 });
@@ -48,6 +48,7 @@ router.post('/',
       user: req.user.id,
       option1: req.body.option1,
       option2: req.body.option2,
+      body: req.body.body,
       questionType: req.body.questionType
     });
 
