@@ -1,0 +1,17 @@
+.splash-container{
+    display: flex;
+    flex-direction: row; 
+    margin: 0 auto; 
+    width: 80%;
+}
+
+.splash-left{
+    height: 700px; 
+    width: 50%;
+    background: #80d4f5; 
+}
+
+.splash-right{
+    width: 50%;
+    background: black; 
+}

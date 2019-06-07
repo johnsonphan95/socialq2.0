@@ -42,10 +42,13 @@ class NavBar extends React.Component {
     return (
       <>
         <div className="navbar-container">
-            <Link to={'/questions'} className="app-name">Social Q's</Link>
-            {this.getLinks()}
-        </div> 
-            <QuestionBoxes />
+          <div className="navbar-container-2">
+              <div className="navbar-left"></div>
+              <Link to={'/questions'} className="app-name">Social Q's</Link>
+              {this.getLinks()}
+          </div> 
+        </div>
+        <QuestionBoxes />
       </>
     )
   }

@@ -12,6 +12,7 @@ import QuestionAnswerContainer from './questions/question_answers_container';
 import QuestionShowContainer from './questions/question_show_container';
 import QuestionTypesContainer from './questions/question_types_container';
 import Play from './home/play'; 
+import Splash from './home/splash'; 
 
 import { Route } from 'react-router';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -20,6 +21,7 @@ const App = () => (
   <div className="app-page">
     <NavBarContainer />
     <Switch>
+      <AuthRoute exact path="/" component={Splash} />
       <AuthRoute exact path = "/signup" component = {SignUpFormContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <ProtectedRoute exact path = "/play" component={Play} />
