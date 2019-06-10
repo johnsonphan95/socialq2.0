@@ -175,15 +175,48 @@ class QuestionTypes extends React.Component {
       );
     } else if (this.state.question.questionType === "rfdb") {
       return (
-        <div>
-          <div>
-            <h2>{this.state.question.option1}</h2>
-          </div>
-          <div>
-            <h4 className="rfdb-button" onClick={this.handleOption1}>Red Flag</h4>
-          </div>
-          <div>
-            <h4 className="rfdb-button" onClick={this.handleOption2}>Deal Breaker</h4>
+        // <div>
+        //   <div>
+        //     <h2>{this.state.question.option1}</h2>
+        //   </div>
+        //   <div>
+        //     <h4 className="answer-buttin" onClick={this.handleOption1}>Red Flag</h4>
+        //   </div>
+        //   <div>
+        //     <h4 className="answer-button" onClick={this.handleOption2}>Deal Breaker</h4>
+        //   </div>
+        // </div>
+        // 
+        <div className="showbackground">
+          <div className="question-container">
+            <div className="container-header-parent">
+              <div className="container-header">
+                <div className="wyr-head">{this.state.question.body} </div>
+                <div className="upvoteDownvote">
+                  <div className="upvote-button" onClick={this.handleUpvote}>
+                    <i className="likeEmote far fa-grin-hearts" />{" "}
+                    {this.state.question.upvote} <br />
+                  </div>
+                  <div
+                    className="downvote-button"
+                    onClick={this.handleDownvote}
+                  >
+                    <i className="dislikeEmote far fa-flushed" />{" "}
+                    {this.state.question.downvote}
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="answers">
+                  <div className="answer-button" onClick={this.handleOption1}>
+                    Red Flag
+                  </div>
+                  <div className="answer-button" onClick={this.handleOption2}>
+                    Dealbreaker
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       );
