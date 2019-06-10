@@ -177,3 +177,8 @@ a:-webkit-any-link {
     padding: 5px;
     font-size: 25px;
 }
+
+.reporting-chart {
+  height: 100px;
+  width:100px;
+}
