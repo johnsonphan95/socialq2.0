@@ -52,7 +52,7 @@
     padding: 20px 30px;
     border: none;
     color: black;
-    background-color: #f8e187;
+    background-color: #f2c40f;
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
@@ -63,7 +63,7 @@
 }
 
 .question-create-submit:hover {   
-    background-color: #f2c40f;
-    
+    background-color: black;
+    color: white;
 }
 
