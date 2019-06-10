@@ -1,12 +1,13 @@
 import React from 'react';
+import { stat } from 'fs';
 
 
 class QuestionTypes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions: [], 
-      
+      questions: [],
+      type: this.props.match.params.type
     };
     this.handleDownvote = this.handleDownvote.bind(this);
     this.handleUpvote = this.handleUpvote.bind(this);
@@ -24,10 +25,34 @@ class QuestionTypes extends React.Component {
     this.setState({ question: randomQ });
   }
 
-  componentDidUpdate() {
+  // static getDerivedStateFromProps(props, state) {
+  //   if (props.match.params.type !== state.type){
+  //     return {
+  //       question: state.question,
+  //       questions: state.questions,
+  //       type: props.match.params.type
+  //     }
+  //   }
+  //   return null 
+  // }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.match.params.type !== this.state.type) {
+      debugger
+      let qList;
+      qList = this.props.questions.filter(
+        question => question.questionType === nextProps.match.params.type
+      );
+      let randomQ = qList[Math.floor(Math.random() * qList.length)];
+      this.setState({ question: randomQ });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    debugger
     if (!this.state.question) {
       this.props.fetchQuestions();
+      debugger
       let qList;
       qList = this.props.questions.filter(
         question => question.questionType === this.props.match.params.type
@@ -36,6 +61,16 @@ class QuestionTypes extends React.Component {
       this.setState({ question: randomQ });
     } 
 
+    else if(this.state.type !== prevProps.match.params.type) {
+      let qList;
+      qList = this.props.questions.filter(
+        question => question.questionType === this.props.match.params.type
+      );
+      let randomQ = qList[Math.floor(Math.random() * qList.length)];
+      this.setState({ question: randomQ });
+    }
+
+  
     // if (
     //   this.props.question.upvote !== this.state.question.upvote ||
     //   this.props.question.downvote !== this.state.question.downvote
@@ -50,11 +85,6 @@ class QuestionTypes extends React.Component {
     // }
     
   }
-
-  componentWillReceiveProps(newState) {
-    this.setState({ questions: newState.questions });
-  }
-
   handleUpvote(e) {
     e.preventDefault(); 
     let new_data = {

@@ -86,8 +86,8 @@ class QuestionCreate extends React.Component {
           <div className="question-create-field">
             
               <select className="question-create-dropdown" onChange={this.update("questionType")}>
-                <option value="wyr">Would You Rather</option>
-                <option value="rfdb">Red Flag or Deal Breaker</option>
+                <option value="wyr">Would You Rather?</option>
+                <option value="rfdb">Red Flag or Deal Breaker?</option>
               </select>
            
             <br />

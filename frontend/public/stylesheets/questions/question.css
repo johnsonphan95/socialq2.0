@@ -4,7 +4,7 @@ a {
 }
     
 a:-webkit-any-link {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: none;
 }
 
@@ -17,10 +17,10 @@ a:-webkit-any-link {
     font-size: 50px;
 }
 .question-container {
-    background-color: #ABDFF1;
+    background-color: #80d4f5;
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 50%;
     height: 50%;
     padding: 20px;
     object-fit: cover;
@@ -35,6 +35,8 @@ a:-webkit-any-link {
     font-weight: bold;
     border-radius: 4px;
     padding: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
 
 }
 
@@ -52,13 +54,13 @@ a:-webkit-any-link {
 .upvote-button {
     font-size: 30px;
     padding: 10px;
-    color: #064A60;
+    color: black;
     font-weight: bold;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .upvote-button:hover {
-    color: rgba(255, 0, 0, 0.657);
+    color: #f2c40f
 }
 .likeEmote {
     font-size: 40px;
@@ -67,13 +69,13 @@ a:-webkit-any-link {
 .downvote-button {
     font-size: 30px;
     padding: 10px;
-    color: #064A60;
+    color: black;
     font-weight: bold;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .downvote-button:hover {
-    color: rgb(95, 95, 95);
+    color: #f2c40f
 }
 .dislikeEmote {
     font-size: 40px;
@@ -87,18 +89,18 @@ a:-webkit-any-link {
 .answer-button {
     padding: 30px;
     margin: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
-    border: 4px solid white;
+    border: 4px solid black;
     border-radius: 4px;
     font-weight: bold;
-    background-color: #EF6C33;
-    color: #064A60  ;
+    background-color: white;
+    color: black  ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .answer-button:hover {
-    background-color: pink;
-    color: #EF6C33;
+    background-color: #f2c40f;
 }
 
 .allQuestions {

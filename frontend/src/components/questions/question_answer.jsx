@@ -95,7 +95,7 @@ class QuestionAnswer extends React.Component {
       ],
       datasets: [{
         data: [
-          genderAnswers["a_male"].length, 
+          genderAnswers["a_male"].length,
           genderAnswers["a_female"].length,
           genderAnswers["b_male"].length,
           genderAnswers["b_female"].length
@@ -115,27 +115,47 @@ class QuestionAnswer extends React.Component {
       }]
     };
 
+    const header = (this.state.question.questionType="wyr") ?
+    (<div className="wyr-header"> 
+      <p>Would You Rather: {this.state.question.option1} or {this.state.question.option2}?</p>
+    </div>) :
+    (
+    <div className="rfdb-header">
+      <p>{this.state.question.body}</p>
+    </div>
+    )
+
     return (
-    <> 
-      <Pie 
-        data={data}
-        width={100}
-        height={100}
-        legend = {{display: true, labels: {fontSize: 18}}}
-        options={{ maintainAspectRatio: false }}
-      />
-      <br />
-      <Doughnut 
-        data={genderData}
-        width={100}
-        height = {100}
-        legend ={{display: true, labels: {fontSize: 18}}}
-        options={{maintainAspectRatio: false}}
-      />
-      <div>
+    <div className="question-answer-container">
+      {header} 
+      <div className="graph-buisness">
+      <div className="total-population-graph">
+        <p id="total-population-text">Here's How Everyone Voted:</p>
+          <Pie data={data}
+              width={100}
+              height={100}
+              legend = {{display: true, labels: {fontSize: 18}}}
+              options={{ maintainAspectRatio: false }}
+              class="pie-graph"
+          />
+      </div>
+
+      <div className="question-answer-right">
+        <div className="age-graph">
+        </div>
+        <div className="gender-graph">
+              <Doughnut
+                data={genderData}
+                width={100}
+                height={100}
+                legend={{ display: true, labels: { fontSize: 18 } }}
+                options={{ maintainAspectRatio: false }}
+              />
+        </div>
 
       </div>
-    </>
+      </div>
+    </div>
   )
 }
 }
