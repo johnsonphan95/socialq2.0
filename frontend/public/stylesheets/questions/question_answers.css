@@ -1,16 +1,51 @@
 .question-answer-container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.wyr-header p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rfdb-header p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.graph-buisness{
+    width: 100%;
     display: flex;
 }
 .total-population-graph{
     text-align: center;
     width: 50%; 
+    border: 1px solid black;
+    padding-bottom: 30px;
 }
 
 #total-population-text{
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 20px;
+      font-weight: bold; 
 }
 
-.chart-js-render-monitor{
+.question-answer-right{
+    /* height: 100%; */
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.age-graph{
     height: 50%;
+    border: 1px solid black;
+}
+
+.gender-graph{
+    height: 50%;
+    border: 1px solid black;
 }

@@ -75,8 +75,20 @@ class QuestionAnswer extends React.Component {
       }]
     };
 
+    const header = (this.state.question.questionType="wyr") ?
+    (<div className="wyr-header"> 
+      <p>Would You Rather: {this.state.question.option1} or {this.state.question.option2}?</p>
+    </div>) :
+    (
+    <div className="rfdb-header">
+      <p>{this.state.question.body}</p>
+    </div>
+    )
+
     return (
-    <div className="question-answer-container"> 
+    <div className="question-answer-container">
+      {header} 
+      <div className="graph-buisness">
       <div className="total-population-graph">
         <p id="total-population-text">Here's How Everyone Voted:</p>
         <Pie data={data}
@@ -86,6 +98,16 @@ class QuestionAnswer extends React.Component {
           options={{ maintainAspectRatio: false }}
           class="pie-graph"
         />
+      </div>
+
+      <div className="question-answer-right">
+        <div className="age-graph">
+        </div>
+
+        <div className="gender-graph">
+        </div>
+
+      </div>
       </div>
     </div>
   )
