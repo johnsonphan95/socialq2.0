@@ -1,0 +1,16 @@
+.question-answer-container{
+    display: flex;
+}
+.total-population-graph{
+    text-align: center;
+    width: 50%; 
+}
+
+#total-population-text{
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 20px;
+}
+
+.chart-js-render-monitor{
+    height: 50%;
+}

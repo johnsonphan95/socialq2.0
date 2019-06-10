@@ -1,5 +1,5 @@
 .question-create-container {
-    background-color: #abdff1;
+    background-color: #80d4f5;
     height: 300px;
     width: 500px;
     margin: 0 auto;
@@ -27,17 +27,17 @@
 
 .question-create-dropdown {
     width: 459px;
-    margin: 20px;
-    font-size: 15px;
+    margin: 25px 20px 20px 20px;
+    font-size: 20px;
     font-weight: bold;
     background-color: white;
-    color: #ef6c33;
+    color: black;
     border: none;
 }
 
 .question-create-form-input {
     width: 455px;
-    height: 35px;
+    height: 20px;
     font-size: 15px;
     border: none;
     border-radius: 3px;
@@ -45,14 +45,14 @@
     text-indent: 10px;
     margin: 5px 20px;
     background-color: white;
-    color: #ef6c33;
+    color: black;
 }
 
 .question-create-submit {
     padding: 20px 30px;
     border: none;
-    color: white;
-    background-color: #ef6c33;
+    color: black;
+    background-color: #f8e187;
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
@@ -62,9 +62,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.question-create-submit:hover {
-    background-color: white; 
-    color: #ef6c33;
+.question-create-submit:hover { 
+    color: #f2c40f;
     
 }
 

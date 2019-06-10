@@ -76,17 +76,18 @@ class QuestionAnswer extends React.Component {
     };
 
     return (
-    <> 
-      <Pie data={data}
-        width={100}
-        height={100}
-        legend = {{display: true, labels: {fontSize: 18}}}
-        options={{ maintainAspectRatio: false }}
-      />
-      <div>
-
+    <div className="question-answer-container"> 
+      <div className="total-population-graph">
+        <p id="total-population-text">Here's How Everyone Voted:</p>
+        <Pie data={data}
+          width={100}
+          height={100}
+          legend = {{display: true, labels: {fontSize: 18}}}
+          options={{ maintainAspectRatio: false }}
+          class="pie-graph"
+        />
       </div>
-    </>
+    </div>
   )
 }
 }

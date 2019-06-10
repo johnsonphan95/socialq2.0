@@ -7,7 +7,6 @@ import {createAnswer} from '../../actions/answer_actions';
 import QuestionTypes from './question_type';
 
 const mapStateToProps = (state) => {
-  debugger 
   return {
     questions: Object.values(state.questions.all)
   };
