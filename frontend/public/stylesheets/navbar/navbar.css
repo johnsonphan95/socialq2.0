@@ -9,7 +9,7 @@ body {
     position: absolute; 
 }
 .vsc-initialized{
-    /* background: black;  */
+    background: #f8e187
 }
 .app-page{
     top: 0;
@@ -18,7 +18,7 @@ body {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: white; 
+    background: #f8e187
 }
 
 #root {
@@ -146,14 +146,14 @@ position: fixed;
     width: 80%;  
     max-width: 1280px;
     margin: 0 auto;
-    background: white; 
+    background: #f8e187;
     padding-bottom: 40px; 
 }
 
 .question-button-container{
     margin-top: 69px;
     height: 120px;
-    background: white;
+    background: #f8e187;
     /* position: relative; 
     border-top: none;  */
 }
@@ -161,7 +161,7 @@ position: fixed;
 .question-button-container-two{
     margin-top: 69px;
     height: 600px;
-    background: white;
+    background: #f8e187;
     /* position: relative; 
     border-top: none;  */
 }
@@ -236,7 +236,6 @@ position: fixed;
     height: 50%;
     padding: 80px 47px;
     background: #80d4f5;
-    border: 1px solid #80d4f5; 
     border-radius: 5px;
     color: black;
     font-weight: bold;
@@ -282,7 +281,6 @@ position: fixed;
     height: 50%;
     padding: 80px 47px;
     background: #80d4f5;
-    border: 1px solid #80d4f5; 
     border-radius: 5px;
     color: black;
     font-size: 55px;
