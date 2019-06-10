@@ -38,7 +38,6 @@ class QuestionTypes extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.type !== this.state.type) {
-      debugger
       let qList;
       qList = this.props.questions.filter(
         question => question.questionType === nextProps.match.params.type
@@ -49,10 +48,8 @@ class QuestionTypes extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    debugger
     if (!this.state.question) {
       this.props.fetchQuestions();
-      debugger
       let qList;
       qList = this.props.questions.filter(
         question => question.questionType === this.props.match.params.type
