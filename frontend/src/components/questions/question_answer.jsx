@@ -181,7 +181,7 @@ class QuestionAnswer extends React.Component {
       }]
     };
 
-    const header = (this.state.question.questionType="wyr") ?
+    const header = (this.state.question.questionType==="wyr") ?
     (<div className="wyr-header"> 
       <p>Would You Rather: {this.state.question.option1} or {this.state.question.option2}?</p>
     </div>) :

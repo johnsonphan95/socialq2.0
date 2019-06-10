@@ -21,6 +21,7 @@ class QuestionShow extends React.Component {
               upvote: question.data.upvote,
               downvote: question.data.downvote, 
           })})
+        window.scrollTo(0, 0)
     }
 
     componentDidUpdate() {
@@ -93,10 +94,10 @@ class QuestionShow extends React.Component {
                             <div className="wyr-head">Would You Rather ? </div>
                             <div className="upvoteDownvote">
                                 <div className="upvote-button" onClick={this.handleUpvote}>
-                                    <i className="likeEmote far fa-grin-hearts"></i> {this.props.question.upvote} <br/>
+                                        <i className="far fa-thumbs-up"></i> {this.props.question.upvote} <br/>
                                 </div>
                                 <div className="downvote-button" onClick={this.handleDownvote}>
-                                    <i className="dislikeEmote far fa-flushed"></i> {this.props.question.downvote}
+                                        <i className="far fa-thumbs-down"></i> {this.props.question.downvote}
                                 </div>
                             </div>
                         </div>
@@ -135,10 +136,10 @@ class QuestionShow extends React.Component {
                                 <div className="wyr-head">{this.props.question.body} </div>
                                 <div className="upvoteDownvote">
                                     <div className="upvote-button" onClick={this.handleUpvote}>
-                                        <i className="likeEmote far fa-grin-hearts"></i> {this.props.question.upvote} <br />
+                                        <i className="far fa-thumbs-up"></i> {this.props.question.upvote} <br />
                                     </div>
                                     <div className="downvote-button" onClick={this.handleDownvote}>
-                                        <i className="dislikeEmote far fa-flushed"></i> {this.props.question.downvote}
+                                        <i className="far fa-thumbs-down"></i> {this.props.question.downvote}
                                     </div>
                                 </div>
                             </div>

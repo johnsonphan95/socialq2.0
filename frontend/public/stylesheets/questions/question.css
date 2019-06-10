@@ -62,6 +62,7 @@ a:-webkit-any-link {
 .upvote-button:hover {
     color: #f2c40f
 }
+
 .likeEmote {
     font-size: 40px;
 }
@@ -105,19 +106,20 @@ a:-webkit-any-link {
 
 .allQuestions {
     display: flex;
-    margin: 40px 0px 0px;
+    margin: 0 auto 20px auto; 
     justify-content: center;
     align-self: center;
     font-size: 50px;
-    background: #064A60;
+    background: black;
     color: white;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     
 }
 
 .questionLink {
-      width: 100%;
+      width: 80%;
     object-fit: fill;
     align-self: center;
 }
@@ -127,13 +129,22 @@ a:-webkit-any-link {
     justify-content: center;
 }
 .question-container-index {
-    padding: 20px;
-    background-color: #EF6C33;
-    margin: 30px 60px;
+    width: 80%;
+    margin: 30px auto 0; 
+    padding: 20px 0px 20px 0px;
+    background-color: #80d4f5;
     display: flex;
     flex-direction: column;
     align-self: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.question-container-index:hover{
+    background-color: black; 
+}
+
+.question-container-index:hover *{
+    color: white 
 }
 
 .question-index {
@@ -146,16 +157,27 @@ a:-webkit-any-link {
     display: flex;
     justify-content: center;
     align-self: flex-end;
+    padding-right: 40px; 
 }
 
 .upvoteIndex {
     font-size: 30px;
     padding: 10px;
-    color: #064A60;
+    color: black;
     font-weight: bold;
     display: flex;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+.upvoteIndex:hover{
+    color: #f2c40f;
+    /* background-color: #f2c40f; */
+}
+
+.upvoteIndex:hover *{
+    color: #f2c40f;
+}
+
 
 .likeEmoteIndex {
     font-size: 40px;
@@ -165,19 +187,25 @@ a:-webkit-any-link {
 .downvoteIndex {
     font-size: 30px;
     padding: 10px;
-    color: #064A60;
+    color: black;
     font-weight: bold;
     display: flex;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+.downvoteIndex:hover *{
+    color: #f2c40f;
+}
+
 .dislikeEmoteIndex {
     font-size: 40px;
     padding: 0px 10px;
 }
 
 .questionComponent {
-    padding: 5px;
-    font-size: 25px;
+    padding: 5px 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
 }
 
 .reporting-chart {
