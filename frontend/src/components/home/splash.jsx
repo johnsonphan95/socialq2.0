@@ -28,6 +28,8 @@ class Splash extends React.Component {
         setTimeout(() => {
             this.setState({ loaded: true });
         }, 1000);
+
+        window.scrollTo(0, 0)
     }
 
     render() {

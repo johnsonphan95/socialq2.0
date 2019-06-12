@@ -96,12 +96,12 @@ class QuestionAnswer extends React.Component {
       datasets: [{
         data: [answers["a"].length, answers["b"].length],
         backgroundColor: [
-          '#EF6C33',
-          '#AAAAAA'
+          '#80d4f5',
+          '#f05c79'
         ],
         hoverBackgroundColor: [
-          '#EF6C33',
-          '#AAAAAA'
+          '#66AAC4',
+          '#C04A61'
         ]
       }]
     };
@@ -121,16 +121,16 @@ class QuestionAnswer extends React.Component {
           genderAnswers["b_female"].length
         ],
         backgroundColor: [
-          '#EF6C33',
-          '#AAAAAA',
-          '#0066ff',
-          '#ff66cc'
+          '#80d4f5',
+          '#99DDF7',
+          '#f05c79',
+          '#F597A9'
         ],
         hoverBackgroundColor: [
-          '#EF6C33',
-          '#AAAAAA',
-          '#0066ff',
-          '#ff66cc'
+          '#66AAC4',
+          '#66AAC4',
+          '#C04A61',
+          '#C04A61'
         ]
       }]
     };
@@ -159,24 +159,24 @@ class QuestionAnswer extends React.Component {
           ageAnswers["b_31"].length,
         ],
         backgroundColor: [
-          '#EF6C33',
-          '#AAAAAA',
-          '#0066ff',
-          '#ff66cc',
-          '#EF6C33',
-          '#AAAAAA',
-          '#0066ff',
-          '#ff66cc'
+          '#CAEDFB',
+          '#ADE4F9',
+          '#80D4F5',
+          '#52889D',
+          '#F9BDC8',
+          '#F597A9',
+          '#F37D94',
+          '#F05C79'
         ],
         hoverBackgroundColor: [
-          '#EF6C33',
-          '#AAAAAA',
-          '#0066ff',
-          '#ff66cc',
-          '#EF6C33',
-          '#AAAAAA',
-          '#0066ff',
-          '#ff66cc'
+          '#66AAC4',
+          '#66AAC4',
+          '#66AAC4',
+          '#66AAC4',
+          '#C04A61',
+          '#C04A61',
+          '#C04A61',
+          '#C04A61'
         ]
       }]
     };
@@ -200,7 +200,7 @@ class QuestionAnswer extends React.Component {
           <Pie data={data}
               width={100}
               height={100}
-              legend = {{display: true, labels: {fontSize: 18}}}
+              legend={{ display: true, position: 'bottom', labels: { fontColor: "black", fontSize: 18, padding: 40}}}
               options={{ maintainAspectRatio: false }}
               class="pie-graph"
           />
@@ -208,20 +208,22 @@ class QuestionAnswer extends React.Component {
 
       <div className="question-answer-right">
         <div className="age-graph">
+          <p id="total-population-text">Age Distribution:</p>
           <Pie 
             data = {ageData}
             width = {100}
             height = {100}
-            legend={{ display: true, labels: { fontSize: 18 } }}
-            options={{ maintainAspectRatio: false }}
+                legend={{ display: true, position: 'right', b: 20, itemWrap: true, labels: { fontColor: "black", fontSize: 12, padding: 10} }}
+            options={{ maintainAspectRatio: false}}
           />
         </div>
         <div className="gender-graph">
+              <p id="total-population-text">Gender Distribution:</p>
               <Pie
                 data={genderData}
                 width={100}
                 height={100}
-                legend={{ display: true, labels: { fontSize: 18 } }}
+                legend={{ display: true, position: 'right', labels: { fontColor: "black", fontSize: 12, padding: 10} }}
                 options={{ maintainAspectRatio: false }}
               />
         </div>
