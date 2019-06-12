@@ -200,7 +200,7 @@ class QuestionAnswer extends React.Component {
           <Pie data={data}
               width={100}
               height={100}
-              legend={{ display: true, position: 'bottom', labels: { fontColor: "black", fontSize: 18, padding: 40}}}
+              legend={{ display: true, position: 'bottom', labels: { fontColor: "black", fontSize: 18, padding: 20}}}
               options={{ maintainAspectRatio: false }}
               class="pie-graph"
           />

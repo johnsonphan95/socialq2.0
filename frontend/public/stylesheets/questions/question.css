@@ -27,7 +27,7 @@ a:-webkit-any-link {
     border-radius: 4px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative; 
-    margin-top: 40px; 
+    margin-top: 60px; 
 }
 
 .wyr-head {
@@ -127,6 +127,7 @@ a:-webkit-any-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 60px; 
 }
 .question-container-index {
     width: 80%;

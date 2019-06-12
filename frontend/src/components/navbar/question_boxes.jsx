@@ -19,7 +19,7 @@ class QuestionBoxes extends React.Component {
           <div className={(this.props.location.pathname === "/play") ? "question-button-container-two" : "question-button-container"}>
             <div className={(this.props.location.pathname === "/play") ? "button-container-two" : "button-container"}>
               <div className={(this.props.location.pathname === "/play") ? "left-button-two" : "left-button"}> 
-              <Link to="/questions/type/wyr">
+              <Link to="/questions/type/wyr" className="link-whatever">
                 <div className={(this.props.location.pathname === "/play") ? "wyr-button-two" : "wyr-button"}>
                   Would You <br/> Rather?
                 </div>
@@ -28,7 +28,7 @@ class QuestionBoxes extends React.Component {
               
               <div className={(this.props.location.pathname === "/play") ? "right-button-two" : "right-button"}>
 
-                <Link to="/questions/type/rfdb">
+                <Link to="/questions/type/rfdb" className="link-whatever">
                   <div className={(this.props.location.pathname === "/play") ? "rfdb-button-two" : "rfdb-button"}>
                     Red Flag or <br/> Dealbreaker?
                   </div>

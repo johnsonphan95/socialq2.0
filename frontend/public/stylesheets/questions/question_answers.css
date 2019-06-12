@@ -1,6 +1,6 @@
 .question-answer-container{
     width: 80%;
-    margin: 0 auto;
+    margin: 60px auto auto auto;
     text-align: center;
 }
 
@@ -56,12 +56,14 @@
 
 .age-graph{
     height: 50%;
-    padding: 0 30px 10px 30px;
+    padding: 0 10px 10px 30px;
     border: 1px solid black;
 }
 
 .gender-graph{
     height: 50%;
-    padding: 0 30px 10px 30px;
+    padding: 0 10px 10px 30px;
     border: 1px solid black;
 }
+
+.legend ul li span{ width:50px; height:15px;display:inline-block; margin-right:5px; }
