@@ -9,6 +9,14 @@ const users = require("./routes/api/users");
 const questions = require("./routes/api/questions");
 const answers = require("./routes/api/answers");
 // const User = require('./models/User');
+const path = require('path');
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  })
+}
 
 mongoose
   .connect(db, { useNewUrlParser: true})
