@@ -23,7 +23,7 @@ class QuestionDetail extends React.Component {
             </div>
             <div className="downvoteIndex">
               <i className="dislikeEmoteIndex far fa-flushed"></i>:   {this.props.question.downvote}
-               
+              
             </div>
           </div>
         </div>
@@ -47,8 +47,6 @@ class QuestionDetail extends React.Component {
             </div>
           </div>
         </div>
-          // <div className="rfdb-button">Red Flag</div>
-          // <div className="rfdb-button">Deal Breaker</div>
       )
     }
   }
