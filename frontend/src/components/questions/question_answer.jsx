@@ -67,14 +67,14 @@ class QuestionAnswer extends React.Component {
       answer.user.age >= 19 && answer.user.age <= 25);
     ageAnswers["a_26_30"] = this.state.answers.filter((answer) => answer.answer === "a" &&
       answer.user.age >= 26 && answer.user.age <= 30);
-    ageAnswers["a_31"] = this.state.answers.filter((answer) => answer.answer === "a" && answer.user.age < 30);
+    ageAnswers["a_31"] = this.state.answers.filter((answer) => answer.answer === "a" && answer.user.age > 30);
     ageAnswers["b_sub18"] = this.state.answers.filter((answer) => answer.answer === "b" &&
       answer.user.age <= 18);
     ageAnswers["b_19_25"] = this.state.answers.filter((answer) => answer.answer === "b" &&
       answer.user.age >= 19 && answer.user.age <= 25);
     ageAnswers["b_26_30"] = this.state.answers.filter((answer) => answer.answer === "b" &&
       answer.user.age >= 26 && answer.user.age <= 30);
-    ageAnswers["b_31"] = this.state.answers.filter((answer) => answer.answer === "b" && answer.user.age < 30);
+    ageAnswers["b_31"] = this.state.answers.filter((answer) => answer.answer === "b" && answer.user.age > 30);
     return ageAnswers;
   }
 
