@@ -23,6 +23,7 @@ body {
 
 #root {
     width: 100%;
+    height: 100%;
 }
 
 .navbar-container{
@@ -97,6 +98,7 @@ position: fixed;
     padding: 10px 18px;
     margin-right: 10px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+    flex-shrink: 1; 
     /* vertical-align: center; 
     top: 50%;
     transform: translateY(-50%); */
@@ -137,6 +139,7 @@ position: fixed;
     color: black;
     padding: 10px 15px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+     flex-shrink: 1; 
 }
 
 .log-out:hover {
@@ -162,6 +165,7 @@ position: fixed;
     margin-top: 69px;
     height: 600px;
     background: #f8e187;
+    width: 100%
     /* position: relative; 
     border-top: none;  */
 }
@@ -180,14 +184,17 @@ position: fixed;
 .button-container-two{
     height: 100%;
     width: 80%;
+    /* min-width: 80%;  */
     display: flex;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: space-between; 
     margin: 0 auto;
     align-items: center; 
+    flex-wrap: wrap; 
 }
 
 .left-button{
+    margin-top: 60px; 
     display: flex;
     width: 50%; 
     justify-content: center; 
@@ -196,33 +203,37 @@ position: fixed;
 .left-button-two{
     height: 50%;
     display: flex;
-    width: 50%; 
+    max-width: 50%; 
     justify-content: center; 
+    flex-shrink: 1; 
 }
 
 .right-button{
     display: flex;
     width: 50%;
     justify-content: center; 
+    margin-top: 60px; 
 }
 
 .right-button-two{
     height: 50%;
     display: flex;
-    width: 50%;
+    max-width: 50%;
     justify-content: center; 
+    flex-shrink: 1; 
 }
 
 .wyr-button{
     width: max-content;
     height: 50%; 
-    padding: 20px;
+    padding: 1.5vw;
     margin: 10px;
     background: #80d4f5;
     border-radius: 5px;
     color: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+    font-size: 1.5vw; 
     text-align: center; 
     transition: .3s;
     cursor: pointer; 
@@ -232,21 +243,22 @@ position: fixed;
 }
 
 .wyr-button-two{
-    width: max-content;
     height: 50%;
-    padding: 80px 47px;
+    padding: 9vh 4vw;
     background: #80d4f5;
     border-radius: 5px;
     color: black;
     font-weight: bold;
     /* font-family: times;  */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 55px; 
+    font-size: 3.0vw; 
     /* "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif; */
     text-align: center; 
     transition: .3s;
     cursor: pointer; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-shrink: 1; 
+    
     
 }
 
@@ -263,13 +275,14 @@ position: fixed;
 .rfdb-button{
     width: max-content;
     height: 50%; 
-    padding: 20px;
+    padding: 1.5vw;
     margin: 10px;
     background: #80d4f5; 
     border-radius: 5px;
     color: black;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
+    font-size: 1.5vw;
     text-align: center; 
     transition: .3s;
     cursor: pointer; 
@@ -279,17 +292,18 @@ position: fixed;
 .rfdb-button-two{
     width: max-content;
     height: 50%;
-    padding: 80px 47px;
+    padding: 9vh 4vw;
     background: #80d4f5;
     border-radius: 5px;
     color: black;
-    font-size: 55px;
+    font-size: 3.0vw; 
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center; 
     transition: .3s;
     cursor: pointer; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-shrink: 1; 
 }
 
 .rfdb-button:hover{

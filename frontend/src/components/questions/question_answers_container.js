@@ -5,6 +5,7 @@ import { fetchUsers } from '../../actions/user_actions';
 import QuestionAnswer from './question_answer';
 
 const mapStateToProps = (state, ownProps) => {
+  debugger 
   return {
     question: state.questions.question, 
     qId: ownProps.match.params.qid

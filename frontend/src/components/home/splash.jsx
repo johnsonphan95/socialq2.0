@@ -27,7 +27,9 @@ class Splash extends React.Component {
 
         setTimeout(() => {
             this.setState({ loaded: true });
-        }, 1500);
+        }, 1000);
+
+        window.scrollTo(0, 0)
     }
 
     render() {
@@ -35,7 +37,7 @@ class Splash extends React.Component {
         const splashRightContent = (this.state.loaded) ?
             (<div>
             <div className="splash-text-container">
-                <p className="splash-text">Social Q's is an application that guages your degree of social conformity through a series of 
+                <p className="splash-text">Social Q's is an application that gauges your degree of social conformity through a series of 
                 'Would You Rather?' and 'Redflag-Dealbreaker?' type questions. Join for free, play a couple rounds, and see how you stack up against the
                     Social Q's population as a whole or against the Social Q's population within your specific demographic.
                 </p>

@@ -38,7 +38,6 @@ class QuestionTypes extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.type !== this.state.type) {
-      debugger
       let qList;
       qList = this.props.questions.filter(
         question => question.questionType === nextProps.match.params.type
@@ -49,10 +48,8 @@ class QuestionTypes extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    debugger
     if (!this.state.question) {
       this.props.fetchQuestions();
-      debugger
       let qList;
       qList = this.props.questions.filter(
         question => question.questionType === this.props.match.params.type
@@ -142,14 +139,14 @@ class QuestionTypes extends React.Component {
                 <div className="wyr-head">Would You Rather ? </div>
                 <div className="upvoteDownvote">
                   <div className="upvote-button" onClick={this.handleUpvote}>
-                    <i className="likeEmote far fa-grin-hearts" />{" "}
+                    <i className="far fa-thumbs-up" />{" "}
                     {this.state.question.upvote} <br /> 
                   </div>
                   <div
                     className="downvote-button"
                     onClick={this.handleDownvote}
                   >
-                    <i className="dislikeEmote far fa-flushed" />{" "}
+                    <i className="far fa-thumbs-down" />{" "}
                     {this.state.question.downvote}
                   </div>
                 </div>
@@ -194,14 +191,14 @@ class QuestionTypes extends React.Component {
                 <div className="wyr-head">{this.state.question.body} </div>
                 <div className="upvoteDownvote">
                   <div className="upvote-button" onClick={this.handleUpvote}>
-                    <i className="likeEmote far fa-grin-hearts" />{" "}
+                    <i className="far fa-thumbs-up" />{" "}
                     {this.state.question.upvote} <br />
                   </div>
                   <div
                     className="downvote-button"
                     onClick={this.handleDownvote}
                   >
-                    <i className="dislikeEmote far fa-flushed" />{" "}
+                    <i className="far fa-thumbs-down" />{" "}
                     {this.state.question.downvote}
                   </div>
                 </div>
