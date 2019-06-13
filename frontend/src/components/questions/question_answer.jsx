@@ -213,7 +213,7 @@ class QuestionAnswer extends React.Component {
             data = {ageData}
             width = {100}
             height = {100}
-                legend={{ display: true, position: 'right', b: 20, itemWrap: true, labels: { fontColor: "black", fontSize: 12, padding: 10} }}
+                legend={{ display: true, position: 'right', b: 20, itemWrap: true, labels: { fontColor: "black",  padding: 10} }}
             options={{ maintainAspectRatio: false}}
           />
         </div>
