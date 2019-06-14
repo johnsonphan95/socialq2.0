@@ -92,7 +92,6 @@
     animation: fadein 2s;
 }
 
-
 .splash-log-in{
     text-decoration: none; 
     line-height: 30px;
@@ -106,6 +105,7 @@
     padding: 10px 15px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 .splash-log-in:hover {
     background-color:	#f2c40f;

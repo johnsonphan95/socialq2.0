@@ -11,6 +11,7 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.demoUserLogin = this.demoUserLogin.bind(this); 
   }
 
   componentWillReceiveProps(nextProps) {
@@ -44,6 +45,14 @@ class LoginForm extends React.Component {
     };
     this.props.login(user);
 
+  }
+
+  demoUserLogin() {
+    this.setState({ username: "Demo-User", password: "password123" }, () => {
+      const user = Object.assign({}, this.state);
+      this.props.login(user)
+      // this.props.history.push("/");
+    }); 
   }
 
   renderErrors() {
@@ -82,6 +91,9 @@ class LoginForm extends React.Component {
           {this.renderErrors()}
         </form>
         <p className="signup-text">New to Social Q's? <a href="/#/signup" className="signup-link">Create an Account</a></p>
+        <div className="demo-login-button-container">
+        <button className="demologin-button-1" onClick={this.demoUserLogin}>Demo Login</button>
+        </div>
       </div>
       </div>
     );

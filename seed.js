@@ -44,7 +44,7 @@ function seedQuestions() {
         {userId: 7, option1: "Be a master at every instrument", option2: "Be fluent in every language", questionType: "wyr", body: "", upvote: 4, downvote: 0 },
         {userId: 1, option1: "Have super sensitive hearing", option2: "Have super sensitive taste", questionType: "wyr", body: "", upvote: 4, downvote: 4 },
         {userId: 2, option1: "Be able to fly", option2: "Be able to become invisible", questionType: "wyr", body: "", upvote: 16, downvote: 1 },
-        {userId: 5, option1: "Win $10,000", option2: "Let your best friend with $100,000", questionType: "wyr", body: "", upvote: 5, downvote: 1 },
+        {userId: 5, option1: "Win $10,000", option2: "Let your best friend win $100,000", questionType: "wyr", body: "", upvote: 5, downvote: 1 },
         {userId: 6, option1: "Redflag", option2: "Dealbraker", questionType: "rfdb", body: "Has 9 dogs", upvote: 4, downvote: 2 },
         {userId: 7, option1: "Redflag", option2: "Dealbraker", questionType: "rfdb", body: "Has a face tattoo", upvote: 15, downvote: 0 },
         {userId: 1, option1: "Redflag", option2: "Dealbraker", questionType: "rfdb", body: "Has been in prison", upvote: 3, downvote: 4 },
