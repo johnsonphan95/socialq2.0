@@ -6,14 +6,9 @@ body {
     height: 100%;
     margin: 0;
     top: 0;
-    position: absolute; 
 }
 .vsc-initialized{
     background: #f8e187
-}
-
-.fix{
-    background: red; 
 }
 .app-page{
     top: 0;
@@ -24,12 +19,10 @@ body {
     width: 100%;
     background: #f8e187
 }
-
 #root {
     width: 100%;
     height: 100%;
 }
-
 .navbar-container{
 position: fixed;
     background-color: black; 
@@ -52,11 +45,9 @@ position: fixed;
     justify-content: space-between; 
     /* vertical-align: middle;  */
 }
-
 .navbar-left{
     flex: 1; 
 }
-
 .app-name{
     /* flex: 1;  */
     align-self: center; 
@@ -70,11 +61,9 @@ position: fixed;
     flex-direction: column;
     justify-content: center; 
 }
-
 .left-navbar{
     flex: 1;
 }
-
 .link-buttons{
     display: flex; 
    align-items: center; 
@@ -82,14 +71,12 @@ position: fixed;
    justify-content: flex-end; 
     
 }
-
 .link-buttons-logged-in{
     display: flex; 
    align-items: center; 
    flex: 1;
    justify-content: flex-end; 
 }
-
 .sign-up{
     text-decoration: none; 
     line-height: 30px;
@@ -107,12 +94,10 @@ position: fixed;
     top: 50%;
     transform: translateY(-50%); */
 }
-
 .sign-up:hover {
-    background-color: 	#f2c40f;
+    background-color:   #f2c40f;
     
 }
-
 .log-in{
     text-decoration: none; 
     line-height: 30px;
@@ -126,12 +111,9 @@ position: fixed;
     padding: 10px 15px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 }
-
 .log-in:hover {
-    background-color: 	#f2c40f;
+    background-color:   #f2c40f;
 }
-
-
 .log-out{
      text-decoration: none; 
     font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -145,7 +127,6 @@ position: fixed;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
      flex-shrink: 1; 
 }
-
 .log-out:hover {
      background-color: #f2c40f;
 }
@@ -156,7 +137,6 @@ position: fixed;
     background: #f8e187;
     padding-bottom: 40px; 
 }
-
 .question-button-container{
     margin-top: 69px;
     height: 120px;
@@ -164,7 +144,6 @@ position: fixed;
     /* position: relative; 
     border-top: none;  */
 }
-
 .question-button-container-two{
     margin-top: 69px;
     height: 600px;
@@ -173,7 +152,6 @@ position: fixed;
     /* position: relative; 
     border-top: none;  */
 }
-
 .button-container{
     height: 100%;
     width: 50%;
@@ -184,7 +162,6 @@ position: fixed;
     align-items: center; 
     padding: 15px
 }
-
 .button-container-two{
     height: 100%;
     width: 80%;
@@ -196,14 +173,12 @@ position: fixed;
     align-items: center; 
     flex-wrap: wrap; 
 }
-
 .left-button{
     margin-top: 60px; 
     display: flex;
     width: 50%; 
     justify-content: center; 
 }
-
 .left-button-two{
     height: 50%;
     display: flex;
@@ -211,14 +186,12 @@ position: fixed;
     justify-content: center; 
     flex-shrink: 1; 
 }
-
 .right-button{
     display: flex;
     width: 50%;
     justify-content: center; 
     margin-top: 60px; 
 }
-
 .right-button-two{
     height: 50%;
     display: flex;
@@ -226,7 +199,6 @@ position: fixed;
     justify-content: center; 
     flex-shrink: 1; 
 }
-
 .wyr-button{
     width: max-content;
     height: 50%; 
@@ -242,10 +214,8 @@ position: fixed;
     transition: .3s;
     cursor: pointer; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     
 }
-
 .wyr-button-two{
     height: 50%;
     padding: 9vh 4vw;
@@ -265,17 +235,14 @@ position: fixed;
     
     
 }
-
 .wyr-button:hover{
     background: black;
     color: white;
 }
-
 .wyr-button-two:hover{
     background: black;
     color: white;
 }
-
 .rfdb-button{
     width: max-content;
     height: 50%; 
@@ -292,7 +259,6 @@ position: fixed;
     cursor: pointer; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .rfdb-button-two{
     width: max-content;
     height: 50%;
@@ -309,17 +275,14 @@ position: fixed;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     flex-shrink: 1; 
 }
-
 .rfdb-button:hover{
     background: black;
     color: white;
 }
-
 .rfdb-button-two:hover{
     background: black;
     color: white;
 }
-
 .greeting-logged-in{
     font-size: 14px;
     font-weight: bold;
