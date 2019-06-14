@@ -11,6 +11,10 @@ body {
 .vsc-initialized{
     background: #f8e187
 }
+
+.fix{
+    background: red; 
+}
 .app-page{
     top: 0;
     left: 0;
