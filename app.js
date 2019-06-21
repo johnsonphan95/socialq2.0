@@ -5,6 +5,7 @@ const db = require('./config/keys').mongoURI;
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
+require('newrelic');
 const users = require("./routes/api/users");
 const questions = require("./routes/api/questions");
 const answers = require("./routes/api/answers");
