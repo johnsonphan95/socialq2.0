@@ -18,12 +18,14 @@ class QuestionDetail extends React.Component {
           </div>
           <div className="upvoteDownvoteOnIndex">
             <div className="upvoteIndex">
-              <i className="likeEmoteIndex far fa-grin-hearts"></i>:  {this.props.question.upvote}
+              <i className="far fa-thumbs-up"></i>:  {this.props.question.upvote}
               
             </div>
             <div className="downvoteIndex">
               <i className="dislikeEmoteIndex far fa-flushed"></i>:   {this.props.question.downvote}
               
+              <i className="far fa-thumbs-down"></i>:   {this.props.question.downvote}
+
             </div>
           </div>
         </div>
@@ -33,16 +35,16 @@ class QuestionDetail extends React.Component {
         <div className="question-container-index">
         <div className="question-index">
           <div className="questionComponent">
-              {this.props.question.body} : Red Flag? Deal Breaker? 
+              Redflag or Dealbreaker?: {this.props.question.body} 
           </div>
         </div>
           <div className="upvoteDownvoteOnIndex">
             <div className="upvoteIndex">
-              <i className="likeEmoteIndex far fa-grin-hearts"></i>:  {this.props.question.upvote}
+              <i className="far fa-thumbs-up" id="thumbs-up"></i>:  {this.props.question.upvote}
 
             </div>
             <div className="downvoteIndex">
-              <i className="dislikeEmoteIndex far fa-flushed"></i>:   {this.props.question.downvote}
+              <i className="far fa-thumbs-down"></i>:   {this.props.question.downvote}
 
             </div>
           </div>

@@ -1,6 +1,4 @@
-body {
-    background-color: white;
-}
+
 
 .signup-form-container{
     height: 800px;
@@ -104,6 +102,27 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.demo-login-button-container{
+    margin-top: 20px; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.demologin-button-1{ 
+    width: 40%;
+    padding: 6px 12px;
+    background-color: #f5d03d;
+    color: black; 
+    border-radius: 3px; 
+    border: none; 
+    margin: 0 auto;  
+    align-self: center; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    white-space: nowrap;
 }
 
 .signup-button:hover {
