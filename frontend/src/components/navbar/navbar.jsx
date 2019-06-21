@@ -13,13 +13,15 @@ class NavBar extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
-     
+    
     this.props.history.replace('/')
   }
 
   getLinks() {
     if (this.props.loggedIn) {
       return (
+        <>
+          <p className="user-details"> Hello, {this.props.currentUser.username}! You are answering as a {this.props.currentUser.age} {this.props.currentUser.gender}</p>
           <div className="link-buttons-logged-in">
               <div className="greeting-logged-in">Hello, {this.props.currentUser.username}</div>
             <div>
@@ -27,6 +29,7 @@ class NavBar extends React.Component {
               <button onClick={this.logoutUser} className="log-out">Logout</button>
             </div>
           </div>
+        </>
       );
     } else {
       return (
@@ -43,8 +46,9 @@ class NavBar extends React.Component {
       <>
         <div className="navbar-container">
           <div className="navbar-container-2">
-              <div className="navbar-left"></div>
-              <Link to={'/questions'} className="app-name">Social Q's</Link>
+              <div className="navbar-left">
+                <Link to={'/questions'} className="app-name">Social Q's</Link>
+              </div>
               {this.getLinks()}
           </div> 
         </div>
