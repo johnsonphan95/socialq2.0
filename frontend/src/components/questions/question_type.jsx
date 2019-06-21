@@ -22,7 +22,12 @@ class QuestionTypes extends React.Component {
       question => question.questionType === this.props.match.params.type
     );
     let randomQ = qList[Math.floor(Math.random() * qList.length)];
-    this.setState({ question: randomQ });
+    debugger
+    this.setState({ 
+      question: randomQ,
+      upvote: randomQ.upvote,
+      downvote: randomQ.downvote
+    });
   }
 
   // static getDerivedStateFromProps(props, state) {
@@ -43,7 +48,10 @@ class QuestionTypes extends React.Component {
         question => question.questionType === nextProps.match.params.type
       );
       let randomQ = qList[Math.floor(Math.random() * qList.length)];
-      this.setState({ question: randomQ });
+      this.setState({ 
+        question: randomQ,
+        upvote: randomQ.upvote,
+        downvote: randomQ.downvote });
     }
   }
 
@@ -67,20 +75,21 @@ class QuestionTypes extends React.Component {
       this.setState({ question: randomQ });
     }
 
-  
-    // if (
-    //   this.props.question.upvote !== this.state.question.upvote ||
-    //   this.props.question.downvote !== this.state.question.downvote
-    // ) {
-    //   this.props.fetchQuestion(this.props.match.params.qid)
-    //     .then(({ question }) => {
-    //       this.setState({
-    //         upvote: question.data.upvote,
-    //         downvote: question.data.downvote,
-    //       })
-    //     })
-    // }
     
+    if (
+      this.state.upvote !== this.state.question.upvote ||
+      this.state.downvote !== this.state.question.downvote
+    ) {
+      this.props.fetchQuestion(this.props.match.params.qid)
+        .then(({ question }) => {
+          debugger
+          this.setState({
+            question: question,
+            // upvote: question.data.upvote,
+            // downvote: question.data.downvote,
+          })
+        })
+    }
   }
   handleUpvote(e) {
     e.preventDefault(); 
