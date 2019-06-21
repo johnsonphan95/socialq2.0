@@ -22,7 +22,7 @@ class QuestionDetail extends React.Component {
               
             </div>
             <div className="downvoteIndex">
-              <i className="dislikeEmoteIndex far fa-flushed"></i>:   {this.props.question.downvote}
+              {/* <i className="dislikeEmoteIndex far fa-flushed"></i>:   {this.props.question.downvote} */}
               
               <i className="far fa-thumbs-down"></i>:   {this.props.question.downvote}
 

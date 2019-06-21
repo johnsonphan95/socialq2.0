@@ -289,5 +289,11 @@ position: fixed;
     font-size: 14px;
     font-weight: bold;
     margin: 0;
+    margin-right: 25px;
     align-self: center;
+}
+
+.user-details {
+  color: white;
+  margin-top: 30px;
 }
