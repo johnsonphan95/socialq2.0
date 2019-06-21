@@ -231,6 +231,7 @@ class QuestionTypes extends React.Component {
 
   render() {
     if (this.state.question === undefined) return null;
+    if (this.props.questions.length === 0) return null;
     return <>{this.displayQuestion()}</>;
   }
 }
