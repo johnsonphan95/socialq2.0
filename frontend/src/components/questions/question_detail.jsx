@@ -16,18 +16,17 @@ class QuestionDetail extends React.Component {
               Would you rather: {this.props.question.option1} or {this.props.question.option2}
             </div>
           </div>
-          <div className="upvoteDownvoteOnIndex">
+          {/* <div className="upvoteDownvoteOnIndex">
             <div className="upvoteIndex">
               <i className="far fa-thumbs-up"></i>:  {this.props.question.upvote}
               
             </div>
             <div className="downvoteIndex">
-              {/* <i className="dislikeEmoteIndex far fa-flushed"></i>:   {this.props.question.downvote} */}
               
               <i className="far fa-thumbs-down"></i>:   {this.props.question.downvote}
 
             </div>
-          </div>
+          </div> */}
         </div>
       )
     } else if (this.props.question.questionType==="rfdb") {
@@ -38,7 +37,7 @@ class QuestionDetail extends React.Component {
               Redflag or Dealbreaker?: {this.props.question.body} 
           </div>
         </div>
-          <div className="upvoteDownvoteOnIndex">
+          {/* <div className="upvoteDownvoteOnIndex">
             <div className="upvoteIndex">
               <i className="far fa-thumbs-up" id="thumbs-up"></i>:  {this.props.question.upvote}
 
@@ -47,7 +46,7 @@ class QuestionDetail extends React.Component {
               <i className="far fa-thumbs-down"></i>:   {this.props.question.downvote}
 
             </div>
-          </div>
+          </div> */}
         </div>
       )
     }

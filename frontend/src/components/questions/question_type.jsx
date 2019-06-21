@@ -23,11 +23,7 @@ class QuestionTypes extends React.Component {
     );
     let randomQ = qList[Math.floor(Math.random() * qList.length)];
     debugger
-    this.setState({ 
-      question: randomQ,
-      upvote: randomQ.upvote,
-      downvote: randomQ.downvote
-    });
+    this.setState({ question: randomQ });
   }
 
   // static getDerivedStateFromProps(props, state) {
@@ -48,10 +44,7 @@ class QuestionTypes extends React.Component {
         question => question.questionType === nextProps.match.params.type
       );
       let randomQ = qList[Math.floor(Math.random() * qList.length)];
-      this.setState({ 
-        question: randomQ,
-        upvote: randomQ.upvote,
-        downvote: randomQ.downvote });
+      this.setState({ question: randomQ });
     }
   }
 
@@ -75,21 +68,33 @@ class QuestionTypes extends React.Component {
       this.setState({ question: randomQ });
     }
 
-    
-    if (
-      this.state.upvote !== this.state.question.upvote ||
-      this.state.downvote !== this.state.question.downvote
-    ) {
-      this.props.fetchQuestion(this.props.match.params.qid)
-        .then(({ question }) => {
-          debugger
-          this.setState({
-            question: question,
-            // upvote: question.data.upvote,
-            // downvote: question.data.downvote,
-          })
-        })
-    }
+    // if (
+    //   this.props.question.upvote !== this.state.question.upvote ||
+    //   this.props.question.downvote !== this.state.question.downvote
+    // ) {
+    //   this.props.fetchQuestion(this.props.match.params.qid)
+    //     .then(({ question }) => {
+    //       this.setState({
+    //         upvote: question.data.upvote,
+    //         downvote: question.data.downvote,
+    //       })
+    //     })
+    // }
+
+    // if (
+    //   this.state.upvote !== this.state.question.upvote ||
+    //   this.state.downvote !== this.state.question.downvote
+    // ) {
+    //   this.props.fetchQuestion(this.props.match.params.qid)
+    //     .then(({ question }) => {
+    //       debugger
+    //       this.setState({
+    //         // question: question,
+    //         upvote: question.data.upvote,
+    //         downvote: question.data.downvote,
+    //       })
+    //     })
+    // }
   }
   handleUpvote(e) {
     e.preventDefault(); 
@@ -146,7 +151,7 @@ class QuestionTypes extends React.Component {
             <div className="container-header-parent">
               <div className="container-header">
                 <div className="wyr-head">Would You Rather ? </div>
-                <div className="upvoteDownvote">
+                {/* <div className="upvoteDownvote">
                   <div className="upvote-button" onClick={this.handleUpvote}>
                     <i className="far fa-thumbs-up" />{" "}
                     {this.state.question.upvote} <br /> 
@@ -158,7 +163,7 @@ class QuestionTypes extends React.Component {
                     <i className="far fa-thumbs-down" />{" "}
                     {this.state.question.downvote}
                   </div>
-                </div>
+                </div> */}
               </div>
               <div>
                 <div className="answers">
@@ -198,7 +203,7 @@ class QuestionTypes extends React.Component {
             <div className="container-header-parent">
               <div className="container-header">
                 <div className="wyr-head">{this.state.question.body} </div>
-                <div className="upvoteDownvote">
+                {/* <div className="upvoteDownvote">
                   <div className="upvote-button" onClick={this.handleUpvote}>
                     <i className="far fa-thumbs-up" />{" "}
                     {this.state.question.upvote} <br />
@@ -210,7 +215,7 @@ class QuestionTypes extends React.Component {
                     <i className="far fa-thumbs-down" />{" "}
                     {this.state.question.downvote}
                   </div>
-                </div>
+                </div> */}
               </div>
               <div>
                 <div className="answers">

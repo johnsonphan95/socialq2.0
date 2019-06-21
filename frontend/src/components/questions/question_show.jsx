@@ -92,14 +92,14 @@ class QuestionShow extends React.Component {
                     <div className="container-header-parent">
                         <div className="container-header">
                             <div className="wyr-head">Would You Rather ? </div>
-                            <div className="upvoteDownvote">
+                            {/* <div className="upvoteDownvote">
                                 <div className="upvote-button" onClick={this.handleUpvote}>
                                         <i className="far fa-thumbs-up"></i> {this.props.question.upvote} <br/>
                                 </div>
                                 <div className="downvote-button" onClick={this.handleDownvote}>
                                         <i className="far fa-thumbs-down"></i> {this.props.question.downvote}
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div>
                             <div className="answers">
@@ -134,14 +134,14 @@ class QuestionShow extends React.Component {
                         <div className="container-header-parent">
                             <div className="container-header">
                                 <div className="wyr-head">{this.props.question.body} </div>
-                                <div className="upvoteDownvote">
+                                {/* <div className="upvoteDownvote">
                                     <div className="upvote-button" onClick={this.handleUpvote}>
                                         <i className="far fa-thumbs-up"></i> {this.props.question.upvote} <br />
                                     </div>
                                     <div className="downvote-button" onClick={this.handleDownvote}>
                                         <i className="far fa-thumbs-down"></i> {this.props.question.downvote}
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div>
                                 <div className="answers">
