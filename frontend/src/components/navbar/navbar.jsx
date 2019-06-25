@@ -23,11 +23,10 @@ class NavBar extends React.Component {
         <>
           <p className="user-details"> Hello, {this.props.currentUser.username}! You are answering as a {this.props.currentUser.age} {this.props.currentUser.gender}</p>
           <div className="link-buttons-logged-in">
-              <div className="greeting-logged-in">Hello, {this.props.currentUser.username}</div>
-            <div>
+              
               <Link to={'/new_question'} className="sign-up">Submit A Question</Link>
               <button onClick={this.logoutUser} className="log-out">Logout</button>
-            </div>
+            
           </div>
         </>
       );
