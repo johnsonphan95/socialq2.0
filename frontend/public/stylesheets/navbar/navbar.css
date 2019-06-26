@@ -41,7 +41,7 @@ position: fixed;
 .navbar-container-2{
     margin: 0 auto; 
     height:100%; 
-    width: 80%;
+    width: 95%;
     z-index: 30;
     display: flex;
     justify-content: space-between; 
