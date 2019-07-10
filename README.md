@@ -1,7 +1,7 @@
 # Basic Overview
 
 <p align="center">
-  <img src="https://github.com/johnsonphan95/socialq2.0/blob/master/frontend/public/images/logo.png?raw=true" width="300" title="hover text">
+  <img src="frontend/public/images/logo.png" width="300" title="socialqs-logo">
 </p>
 
 ---------
