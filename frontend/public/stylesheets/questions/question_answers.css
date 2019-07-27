@@ -24,7 +24,7 @@
     width: auto;
     height: auto;
     display: flex;
-    margin-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .total-population-graph *{
